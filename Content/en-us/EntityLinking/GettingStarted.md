@@ -89,8 +89,8 @@ Below is example code, which adds the "wikipediaId" to the response by using Ent
 {
     var text = this.inputBox.Text;
     var client = new EntityLinkingServiceClient("Your subscription key");
-    var linkResponse = await client.RecognizeAsync(text);
-    var result = string.Join(", ", linkResponse.Select(i => i.WikipediaId).ToList());
+    var linkResponse = await client.LinkAsync(text);
+    var result = string.Join(", ", linkResponse.Select(i => i.WikipediaID).ToList());
     this.outputBlock.Text = result;
 }
  ```
