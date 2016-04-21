@@ -12,6 +12,8 @@ In contrast to applications using Cognitive Services’ other APIs which are cre
 
 To use LUIS, first make sure that you have an up-to-date version of Microsoft Edge, Internet Explorer or Google Chrome. Go to the home page, www.luis.ai, and log in. You will see a screen like the one below. 
 
+![GetStarted-with-LUIS](./Video/log_in_2.PNG)
+
 ###Creating your first LUIS Application
 
 All LUIS applications are centered around a domain-specific topic, for example booking of tickets, flights, hotels, rental cars etc. or content related to exercising, tracking fitness efforts and setting goals. You need to decide on a domain-specific topic before you can create your LUIS application. In this case, let's take the example of a news-browsing application.
