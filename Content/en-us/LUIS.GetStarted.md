@@ -45,6 +45,25 @@ Using the “Date” example mentioned above, follow these steps.
 6.	To delete a child, if you made a mistake, click the trash can sign next to the entity child.
 7.	When finished, click "**Save**".
 
+  * Labeling Children
+
+1.Type any utterance like “Find news about Obama publish from 12 July 2014 till 12 August 2014”
+2.Mark the entity “12 July 2014”, click on the arrow  beside the Parent, Date, Entity to display its children.
+3.Select the child entity.
+4.Submit the utterance.
+
+  * Important Notes
+
+
+•You may add up to 10 children types for each parent entity.
+•When adding children, make sure you add them at the same time you are creating the parent entity.
+•To delete an entity with its children, click the entity name at the left corner, and then click "Delete" in the dialog box.
+
+  * JSON Response
+
+Below you find an example of the Hierarchical Entities and their children as JSON output. Click "Publish" on the left-hand panel, then click "Update published application". 
+1.Set the URL parameter "q" to be your question/utterance, for example, " find news about Paris from 12 July 2014 till 12 August 2015".
+2. Hit the "Enter" key or click on the generated URL in the dialog. 
 
 
 
