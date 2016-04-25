@@ -1,12 +1,15 @@
-<!-- Meta data -->
+<!-- NavPath: LUIS API
+LinkLabel: Overview
+Url: LUIS-api/documentation/home
+Weight: 100 -->
 
 #Overview
 
 ###Language Understanding Intelligent Services (LUIS) brings the growing power and simplicity of artificial intelligence to your apps.
 
-Benefits to using LUIS
+######Benefits to using LUIS
 
-o	Localization support (UI always in English, but English, French, Italian, Spanish, and Chinese supported utterances)
+Localization support (UI always in English, but English, French, Italian, Spanish, and Chinese supported utterances)
 
 Here’s how it works
 One of the key problems in human-computer interactions is the ability of the computer to understand what a person wants, and to find the pieces of information that are relevant to their intent. For example, in a news-browsing app, you might say "Get news about virtual reality companies," in which case there is the intention to "Find news", and "virtual reality companies" is the topic. LUIS is designed to enable you to quickly deploy an http endpoint that will take the sentences you send it, and interpret them in terms of the intention they convey, and the key entities like "virtual reality companies" that are present. LUIS lets you custom design the set of intentions and entities that are relevant to the application, and then guides you through the process of building a language understanding system. 
