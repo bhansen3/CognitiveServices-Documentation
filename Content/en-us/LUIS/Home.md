@@ -7,7 +7,7 @@ Weight: 100 -->
 
 ###Language Understanding Intelligent Services (LUIS) brings the growing power and simplicity of artificial intelligence to your apps.
 
-LUIS is designed to enable you to quickly deploy an http endpoint that will take the sentences you send it and interpret them in terms of the intention they convey and the key entities that are present. LUIS lets you custom design the set of intentions and entities that are relevant to the application, and then guides you through the process of building a language understanding system. 
+LUIS is designed to enable you to quickly deploy an http endpoint that will take the sentences you send it and interpret them in terms of the intention they convey and the key entities that are present. By using the LUIS web interface, you can custom design the set of intentions and entities that are relevant to your application, then let LUIS guide you through the process of building a language understanding system. 
 
 #####Benefits to using LUIS
 
@@ -20,5 +20,9 @@ Once your application is deployed and traffic starts to flow into the system, LU
 The LUIS UI is always in English, but several languages such as English, French, Italian, Spanish, and Chinese are supported when it comes to understanding utterances. 
 
 #####Accessing LUIS programmatically 
+
+LUIS offers a set of programmatic REST APIs that can be used to automate the application creation process. These APIs allow you to author and publish your app by using LUIS endpoints. 
+
+Click here for a complete [API reference](https://dev.projectoxford.ai/docs/services/56d95961e597ed0f04b76e58/operations/56f8a55119845511c81de488). 
 
 
