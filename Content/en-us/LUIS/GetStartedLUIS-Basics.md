@@ -5,15 +5,13 @@ Weight: 100 -->
 
 #Get Started with LUIS: The Basics
 
-#Get started with LUIS
-
 In contrast to applications using Cognitive Services’ other APIs which are created on a development platform such as Visual Studio or Android Studio, LUIS lets you build your applications by using the LUIS web interface. No coding needed other than the ability to interpret and use the returned JSON types in your application.
 
 ###Using LUIS for the first time
 
 To use LUIS, first make sure that you have an up-to-date version of Microsoft Edge, Internet Explorer or Google Chrome. Go to the home page, www.luis.ai, and log in. You will see a screen like the one below. 
 
-![GetStarted-with-LUIS](/.Video/log_in_2.PNG)
+![GetStarted-with-LUIS](/.Images/log_in_2.PNG)
 
 ###Creating your first LUIS Application
 
