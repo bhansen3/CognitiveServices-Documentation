@@ -1,5 +1,5 @@
 <!-- NavPath: GetStartedLUISbasics
-LinkLabel: GetStartedWithLUIS-Basics
+LinkLabel: Get Started With LUIS-Basics
 Url: LUIS-api/documentation/GetStartedWithLUIS-Basics
 Weight: 100 -->
 
