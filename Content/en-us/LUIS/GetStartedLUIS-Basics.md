@@ -24,15 +24,15 @@ Click on **My Applications** and then the **New Application** button to create a
 
 ###Step 2: Adding entities, intents, and labels
 
-  * ######Defining Entities
+######Defining Entities
   
 On the left-hand panel, you will see an option to add entities. We'd like to be able to say what kind of news we are interested in, and also, for sharing, to say who we'd like to share a story with. In order to capture the notion of a news topic, and a recipient for sharing, let's create two entity types: "Topic" and "Recipient". To do this, click the "**+**" button on the **Entity bar**, and fill in the resulting entry box once for "**Topic**" and once for "**Recipient**". 
 
-  * ######Hierarchical Entities
+######Hierarchical Entities
   
 You now have the ability to define relationships between entities based on hereditary hierarchical patterns. The generic entity acts as the parent and the children are the specific types, or sub-groups, under the parent, yet both share the same characteristics. For example, a generic entity may be called “Date” and the specific children of this parent may be called “StartDate” and “EndDate”. “Date”, including its children, has now been transformed from being a generic entity to being a specific entity. The LUIS service can recognize these types when labeling utterances, building models and training them for this entity and its children. 
 
-  * ######Defining Hierarchical Entities
+######Defining Hierarchical Entities
   
 Using the “Date” example mentioned above, follow these steps. 
 
@@ -44,20 +44,20 @@ Using the “Date” example mentioned above, follow these steps.
 6.	To delete a child, if you made a mistake, click the trash can sign next to the entity child.
 7.	When finished, click "**Save**".
 
-  * ######Labeling Children
+######Labeling Children
   
 1.Type any utterance like “Find news about Obama publish from 12 July 2014 till 12 August 2014”
 2.Mark the entity “12 July 2014”, click on the arrow  beside the Parent, Date, Entity to display its children.
 3.Select the child entity.
 4.Submit the utterance.
 
-* ######Important Notes
+######Important Notes
 
  * You may add up to 10 children types for each parent entity.
  * When adding children, make sure you add them at the same time you are creating the parent entity.
  * To delete an entity with its children, click the entity name at the left corner, and then click "Delete" in the dialog box.
 
-  * ######JSON Response
+######JSON Response
 
 Below you find an example of the Hierarchical Entities and their children as JSON output. Click "Publish" on the left-hand panel, then click "Update published application". 
 1. Set the URL parameter "q" to be your question/utterance, for example, " find news about Paris from 12 July 2014 till 12 August 2015".
