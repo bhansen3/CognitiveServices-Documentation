@@ -48,10 +48,10 @@ Using the “Date” example mentioned above, follow these steps.
 
 ######Labeling Children
   
-1.Type any utterance like “Find news about Obama publish from 12 July 2014 till 12 August 2014”
-2.Mark the entity “12 July 2014”, click on the arrow  beside the Parent, Date, Entity to display its children.
-3.Select the child entity.
-4.Submit the utterance.
+1. Type any utterance like “Find news about Obama publish from 12 July 2014 till 12 August 2014”
+2. Mark the entity “12 July 2014”, click on the arrow  beside the Parent, Date, Entity to display its children.
+3. Select the child entity.
+4. Submit the utterance.
 
 ######Important Notes
 
