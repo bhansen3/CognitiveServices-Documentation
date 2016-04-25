@@ -20,13 +20,13 @@ In the application, you will bundle together the intents and entities that are i
 
 ###Step 1: Creating an Application
 
-Click on **My Applications** and then the **New Application** button to create a new application. In the dialog box, name it "NewsChat". Check that the application culture is set to English. Then click Add App. This will create the application and take you to the LUIS Application Editor: 
+Click on **My Applications** and then the **New Application** button to create a new application. In the dialog box, name it "NewsChat". Check that the application culture is set to English. Then click **Add App**. This will create the application and take you to the LUIS Application Editor: 
 
 ###Step 2: Adding entities, intents, and labels
 
 ######Defining Entities
   
-On the left-hand panel, you will see an option to add entities. We'd like to be able to say what kind of news we are interested in, and also, for sharing, to say who we'd like to share a story with. In order to capture the notion of a news topic, and a recipient for sharing, let's create two entity types: "Topic" and "Recipient". To do this, click the "**+**" button on the **Entity bar**, and fill in the resulting entry box once for "**Topic**" and once for "**Recipient**". 
+On the left-hand panel, you will see an option to add entities. We'd like to be able to say what kind of news we are interested in, and also, for sharing, to say who we'd like to share a story with. In order to capture the notion of a news topic, and a recipient for sharing, let's create two entity types: "Topic" and "Recipient". To do this, click the "**+**" button on the **Entity bar**, and fill in the resulting entry box once for "Topic" and once for "Recipient". 
 
 ######Hierarchical Entities
   
