@@ -88,6 +88,24 @@ Finally, it might be useful to have the app read stories out loud, so let's add 
 
 ![Pre-built example](./Images/prebuilt-example.png)
 
+###Step 3: Seeding the System
+
+Now that we have a set of intents and entities defined, the next step is to provide some more examples of utterances that illustrate these concepts. Click on the **New Utterances** tab at the top of the screen. Type "Search for news about africa" into the entry box and hit enter. You will see a dropdown box showing the possible intents. Select "FindNews". Note that "africa" is the topic of the news stories we want. Click on "africa" and then select "Topic" from the dropdown box. 
+
+The system needs to be seeded with several examples of each intent, and several examples of each entity. Enter "Share that with Katie", select "ShareNews" as the intent, and label "Katie" as the recipient. Enter "read it" and label that as an example of "Read". As an example of a **None** intent, enter "I like chocolate cake". Now think of several more examples of each intent, and enter them. 
+
+The system has now been seeded with enough data to deploy an initial application. That is done by training and publishing a model.
+
+###Step 4: Training
+
+When you "train" a model, LUIS generalizes from the examples you have labeled, and develops code to recognize the relevant intents and entities in the future. Internally, LUIS uses logistic regression classifiers to determine intents, and conditional random fields (CRFs) to determine the entities. The training process results in optimized classifiers and CRFs, referred to as models, that LUIS can use in the future. To do training, just click the **Train** button at the bottom of the page. Training also automatically occurs periodically. 
+
+###Step 5: Publishing a Model
+
+The next step is to deploy the models to an HTTP endpoint that will interpret the sentences we send it. Click the **Publish** button in the upper left-hand corner, and then **Publish web service** in the resulting window. After a couple of moments, you will see a url that makes your models available as a web service. LUIS will look like this: 
+
+![Publish LUIS app](./Images/publish.png) 
+
 ###Summary
 
 You have now built a basic LUIS application.
