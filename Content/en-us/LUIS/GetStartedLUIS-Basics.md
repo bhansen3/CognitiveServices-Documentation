@@ -11,7 +11,7 @@ In contrast to applications using Cognitive Services’ other APIs which are cre
 
 To use LUIS, first make sure that you have an up-to-date version of Microsoft Edge, Internet Explorer or Google Chrome. Go to the home page, www.luis.ai, and log in. You will see a screen like the one below. 
 
-![GetStarted-with-LUIS](/.Images/log_in_2.PNG)
+![GetStarted-with-LUIS](./Images/log_in_2.png)
 
 ###Creating your first LUIS Application
 
