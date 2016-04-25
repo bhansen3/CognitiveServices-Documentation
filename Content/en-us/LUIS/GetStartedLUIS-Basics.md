@@ -76,7 +76,7 @@ Next, we will add two intents to the application. At the top left of the screen,
 
 Go ahead and click **+** next to **Intents**. You'll see a dialog box appear to add a new intent. Enter the intent name of "FindNews", and the example command that triggers the intent as "find news about mars". This will look like the screen below. 
 
-Then click **Save**, and the utterance will be presented for labeling. The intent "FindNews" will already be selected from the intent drop-down. We now need to label the entities present in the utterance. Select the word "mars" (or just click on it) -- it will be highlighted, and you will see a drop-down with the two entities you've defined: 
+Then click **Save**, and the utterance will be presented for labeling. The intent "FindNews" will already be selected from the intent drop-down. We now need to label the entities present in the utterance. Select the word "mars" (or just click on it) -- it will be highlighted, and you will see a drop-down with the two entities you've defined. 
 
 ![Labeling Entities](./Images/labeling.png)
 
@@ -84,7 +84,7 @@ Click on "Topic", and you'll see the word "mars" highlighted in red, indicating 
 
 Next, add a second intent called "ShareNews", with the example "send it to wally". Label "wally" as a "Recipient" entity , and click on **Submit**.
 
-Finally, it might be useful to have the app read stories out loud, so let's add a third intent called "Read", with the example "read me the second one". Note how "second" is automatically highlighted as an ordinal pre-built entity: 
+Finally, it might be useful to have the app read stories out loud, so let's add a third intent called "Read", with the example "read me the second one". Note how "second" is automatically highlighted as an ordinal pre-built entity. 
 
 ![Pre-built example](./Images/prebuilt-example.png)
 
@@ -102,7 +102,7 @@ When you "train" a model, LUIS generalizes from the examples you have labeled, a
 
 ###Step 5: Publishing a Model
 
-The next step is to deploy the models to an HTTP endpoint that will interpret the sentences we send it. Click the **Publish** button in the upper left-hand corner, and then **Publish web service** in the resulting window. After a couple of moments, you will see a url that makes your models available as a web service. LUIS will look like this: 
+The next step is to deploy the models to an HTTP endpoint that will interpret the sentences we send it. Click the **Publish** button in the upper left-hand corner, and then **Publish web service** in the resulting window. After a couple of moments, you will see a url that makes your models available as a web service. LUIS will look like the below screenshot.
 
 ![Publish LUIS app](./Images/publish.png) 
 
