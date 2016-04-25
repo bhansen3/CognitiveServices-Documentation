@@ -9,7 +9,7 @@ LUIS lets you build your applications by using the LUIS web interface. No coding
 
 ###Using LUIS for the first time
 
-To use LUIS, first make sure that you have an up-to-date version of Microsoft Edge, Internet Explorer or Google Chrome. Go to the home page, www.luis.ai, and log in. You will see a screen like the one below. 
+To use LUIS, first make sure that you have an up-to-date version of Microsoft Edge, Internet Explorer or Google Chrome. Go to the home page www.luis.ai and log in. You will see a screen like the one below. 
 
 ![GetStarted-with-LUIS](./Images/log_in_2.png)
 
@@ -44,6 +44,8 @@ Using the “Date” example mentioned above, follow these steps.
 6.	To delete a child, if you made a mistake, click the trash can sign next to the entity child.
 7.	When finished, click "**Save**".
 
+![Hierarchical Entities](./Images/AuthoringHierarchicalEntities.jpg)
+
 ######Labeling Children
   
 1.Type any utterance like “Find news about Obama publish from 12 July 2014 till 12 August 2014”
@@ -60,10 +62,18 @@ Using the “Date” example mentioned above, follow these steps.
 ######JSON Response
 
 Below you find an example of the Hierarchical Entities and their children as JSON output. Click "Publish" on the left-hand panel, then click "Update published application". 
-1. Set the URL parameter "q" to be your question/utterance, for example, " find news about Paris from 12 July 2014 till 12 August 2015".
+1. Set the URL parameter "q" to be your question/utterance, for example, "Find news about Paris from 12 July 2014 till 12 August 2015".
 2. Hit the "Enter" key or click on the generated URL in the dialog. 
 
+######Using Bing Entities
 
+Once our app shows a set of news stories, we might want to say something like "Read the second one." This will require understanding ordinal words like "first," "second," and so on. Rather than specifying these by hand, we can use a pre-built entity model called "Ordinals". Click the button for "Prebuilt Entities" and select "Ordinals" from the dropdown menu. 
+
+######Defining Intents and labeling utterances
+
+Next, we will add two intents to the application. At the top left of the screen, you will see an area for intents. All applications come with one pre-defined intent, "None". This will recognize user statements that have nothing to do with the application, for example if someone says "How far is it to the moon" to our NewsChat system. 
+
+Go ahead and click **+** next to **Intents**. You'll see a dialog box appear to add a new intent. Enter the intent name of "FindNews", and the example command that triggers the intent as "find news about mars". This will look like the screen below. 
 
 
 
