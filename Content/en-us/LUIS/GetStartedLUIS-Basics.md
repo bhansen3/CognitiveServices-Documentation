@@ -67,13 +67,26 @@ Below you find an example of the Hierarchical Entities and their children as JSO
 
 ######Using Bing Entities
 
-Once our app shows a set of news stories, we might want to say something like "Read the second one." This will require understanding ordinal words like "first," "second," and so on. Rather than specifying these by hand, we can use a pre-built entity model called "Ordinals". Click the button for "Prebuilt Entities" and select "Ordinals" from the dropdown menu. 
+Once our app shows a set of news stories, we might want to say something like "Read the second one." This will require understanding ordinal words like "first," "second," and so on. Rather than specifying these by hand, we can use a pre-built entity model called **Ordinals**. Click the button for **Prebuilt Entities** and select **Ordinals** from the dropdown menu. 
 
 ######Defining Intents and labeling utterances
 
-Next, we will add two intents to the application. At the top left of the screen, you will see an area for intents. All applications come with one pre-defined intent, "None". This will recognize user statements that have nothing to do with the application, for example if someone says "How far is it to the moon" to our NewsChat system. 
+Next, we will add two intents to the application. At the top left of the screen, you will see an area for intents. All applications come with one pre-defined intent, **None**. This will recognize user statements that have nothing to do with the application, for example if someone says "How far is it to the moon" to our NewsChat system. 
 
 Go ahead and click **+** next to **Intents**. You'll see a dialog box appear to add a new intent. Enter the intent name of "FindNews", and the example command that triggers the intent as "find news about mars". This will look like the screen below. 
 
+Then click **Save**, and the utterance will be presented for labeling. The intent "FindNews" will already be selected from the intent drop-down. We now need to label the entities present in the utterance. Select the word "mars" (or just click on it) -- it will be highlighted, and you will see a drop-down with the two entities you've defined: 
 
+![Labeling Entities](./Images/labeling.png)
 
+Click on "Topic", and you'll see the word "mars" highlighted in red, indicating that you've labeled the word "mars" as a "Topic". Now click on **Submit** to submit this label. 
+
+Next, add a second intent called "ShareNews", with the example "send it to wally". Label "wally" as a "Recipient" entity , and click on **Submit**.
+
+Finally, it might be useful to have the app read stories out loud, so let's add a third intent called "Read", with the example "read me the second one". Note how "second" is automatically highlighted as an ordinal pre-built entity: 
+
+![Pre-built example](./Images/prebuilt-example.png)
+
+###Summary
+
+You have now built a basic LUIS application.
