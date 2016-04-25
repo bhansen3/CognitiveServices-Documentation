@@ -62,6 +62,7 @@ Using the “Date” example mentioned above, follow these steps.
 ######JSON Response
 
 Below you find an example of the Hierarchical Entities and their children as JSON output. Click "Publish" on the left-hand panel, then click "Update published application". 
+
 1. Set the URL parameter "q" to be your question/utterance, for example, "Find news about Paris from 12 July 2014 till 12 August 2015".
 2. Hit the "Enter" key or click on the generated URL in the dialog. 
 
