@@ -46,7 +46,7 @@ Only the top scoring intent is returned in JSON response.
 To continue the dialog, append the answer to the question along with the contextID as request parameters.Example: &q=financial crisis &contextId= a144a208-2f1f-4faf-877b-8898ec523022 
 
 Here is the JSON repsonse for the following Dialog question: 
-
+```
     "dialog":  
  {
     "prompt": "Can you please specify a publication date?",
@@ -54,4 +54,4 @@ Here is the JSON repsonse for the following Dialog question:
     "contextId": "2e48c7e0-d343-465f-ab0d-03a7598b655f",
     "status": "Question"
   }
-
+```
