@@ -26,7 +26,8 @@ So building on the action binding and schematization (click here to go to action
 6. Click **Save**. 
 
 ![Adding prompts](./Images/AddingPrompts.PNG)
-Dialog Execution
+
+###Dialog Execution
 
 Testing with query like "Find News". Here is the JSON response extract for the dialog response: 
 
