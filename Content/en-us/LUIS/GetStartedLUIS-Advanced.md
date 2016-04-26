@@ -7,11 +7,29 @@ Weight: 100 -->
 
 ######Adding advanced features to your basic LUIS application
 
+###Action Binding
+
+Once a developer creates one or more entities, and starts creating intents. He/she can link this intent to an action and specifies requirements for these actions to be triggered. These requirements are known as parameters. LUIS supports only one action per intent. Each action can include a group of parameters derived from entities. The parameter can be optional or required, LUIS assumes that an action is triggered only when all the required parameters are filled. 
+
+###Defining an Action
+
+1. On the Application Editor page, on the left-hand panel, click an existing intent or create a new one, for example "FindNews".
+2. In the "Add a new intent" dialog box, click "Add Action".
+3. Let us say this action requires three parameters, "Publication Date", “Subject” & “Publisher”.
+4. Click "Add Parameter". Type the name of the parameter, for example "Publication Date", and specify its type from the entities in the "Type" drop-down. In this case "Datetime" is the entity. 
+5. Click "Add Parameter" again to add the next parameter. Let it be "Subject" with "Topic" being the entity.
+6. Add a third parameter "Publisher" with "Name" being the entity.
+7. Check the "Required" check box next to the name of the parameter that is required for the action to trigger.
+
+Notes:
+
+To delete a parameter, click on the trashcan next to its field. To delete an action with its parameters, click "Delete Action" from inside the "Add a new intent" dialog box.
+
 ###Dialog Support (Preview)
 
 LUIS allows you to add conversational interfaces to your applications through a new powerful dialog engine. You can author and  execute your dialog in just a few steps. For example, if the user is searching for news about “The Financial crisis”, and typed an utterance without specifying one of the require parameter, "Publication Date", the system consequently will surface a prompt question saying "Could you please specify the required publication date?”. Let’s see below how you can build and consume this feature. 
 
-So building on the action binding and schematization (click here to go to action binding) After defining all the parameters needed for actions triggering, you now have the ability to add a prompt question to be surfaced, if any of the required parameters is missing. and this where the dialog comes in. 
+After defining all the parameters needed for actions triggering, you now have the ability to add a prompt question to be surfaced, if any of the required parameters is missing. and this where the dialog comes in. 
 
 ###Dialog Authoring
 
