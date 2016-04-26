@@ -25,6 +25,7 @@ So building on the action binding and schematization (click here to go to action
 5. Use the up and down arrows to define the order in which your application will ask these questions. 
 6. Click **Save**. 
 
+![Adding prompts](./Images/AddingPrompts.PNG)
 Dialog Execution
 
 Testing with query like "Find News". Here is the JSON response extract for the dialog response: 
