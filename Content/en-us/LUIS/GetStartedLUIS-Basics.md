@@ -5,7 +5,7 @@ Weight: 100 -->
 
 #Get Started with LUIS: The Basics
 
-LUIS lets you build your applications by using the LUIS web interface. No coding needed other than the ability to interpret and use the returned JSON types in your application. It is also possible to use the [LUIS REST API](https://dev.projectoxford.ai/docs/services/56d95961e597ed0f04b76e58/) for automation of applications.
+LUIS lets you build your applications by using the LUIS web interface. No coding needed other than the ability to interpret and use the returned JSON in your application. It is also possible to use the [LUIS REST API](https://dev.projectoxford.ai/docs/services/56d95961e597ed0f04b76e58/) for automation of applications.
 
 ###Using LUIS for the first time
 
@@ -15,32 +15,34 @@ To use LUIS, first make sure that you have an up-to-date version of Microsoft Ed
 
 ###Creating your first LUIS Application
 
-All LUIS applications are centered around a domain-specific topic, for example booking of tickets, flights, hotels, rental cars etc. or content related to exercising, tracking fitness efforts and setting goals. You need to decide on a domain-specific topic before you can create your LUIS application. In this case, let's take the example of a news-browsing application.
-In the application, you will bundle together the intents and entities that are important to your task. Two intents relevant to the domain of news-browsing are "FindNews" and "SendTo," for sharing stories with friends. Two entities that are important are "Topic" and "Recipient.". Once we have identified the intents and entities, we can take an appropriate action, when a user interacts with the system. 
+All LUIS applications are centered around a domain-specific topic, for example booking of tickets, flights, hotels, rental cars etc. or content related to exercising, tracking fitness efforts and setting goals. You need to decide on a domain-specific topic before you can create your LUIS application. In this case, let's take the example of a virtual travel booking agency application.
+In the application, you will bundle together the intents and entities that are important to your task. Two intents relevant to the domain of travel booking are "BookFlight" and "GetWeather". Two entities that are important are "Location" and "DateTime". Once we have identified the intents and entities, we can take an appropriate action, when a user interacts with the application. 
 
 ###Step 1: Creating an Application
 
-Click on **My Applications** and then the **New Application** button to create a new application. In the dialog box, name it "NewsChat". Check that the application culture is set to English. Then click **Add App**. This will create the application and take you to the LUIS Application Editor: 
+Click on **My Applications** and then the **New Application** button to create a new application. In the dialog box, name it "TravelAgent". Check that the application culture is set to English. Then click **Add App**. 
+![New LUIS Application](./Images/NewApplication.PNG) 
+This creates the application and takes you to the LUIS Application Editor.
 
 ###Step 2: Adding entities, intents, and labels
 
 ######Defining Entities
   
-On the left-hand panel, you will see an option to add entities. We'd like to be able to say what kind of news we are interested in, and also, for sharing, to say who we'd like to share a story with. In order to capture the notion of a news topic, and a recipient for sharing, let's create two entity types: "Topic" and "Recipient". To do this, click the "**+**" button on the **Entity bar**, and fill in the resulting entry box once for "Topic" and once for "Recipient". 
+On the left-hand panel, you will see an option to add entities. We'd like to be able to say what kind of travels we are interested in, and also, for planning purposes, to get an idea of what the weather is like at our travel destination. In order to capture the topic of "location", let's create the entity type: "Location". To do this, click the "**+**" button on the **Entities** bar, and fill in the resulting text entry box for "Location". 
 
 ######Hierarchical Entities
   
-You now have the ability to define relationships between entities based on hereditary hierarchical patterns. The generic entity acts as the parent and the children are the specific types, or sub-groups, under the parent, yet both share the same characteristics. For example, a generic entity may be called “Date” and the specific children of this parent may be called “StartDate” and “EndDate”. “Date”, including its children, has now been transformed from being a generic entity to being a specific entity. The LUIS service can recognize these types when labeling utterances, building models and training them for this entity and its children. 
+You now have the ability to define relationships between entities based on hereditary hierarchical patterns. The generic entity acts as the parent and the children are the specific types, or sub-groups, under the parent, yet both share the same characteristics. For example, a generic entity may be called “Location” and the specific children of this parent may be called “ToLocation” and “FromLocation”. “Location”, including its children, has now been transformed from being a generic entity to being a specific entity. The LUIS service can recognize these types when labeling utterances, building models and training them for this entity and its children. 
 
 ######Defining Hierarchical Entities
   
-Using the “Date” example mentioned above, follow these steps. 
+Using the “Location” example mentioned above, follow these steps. 
 
 1.	In the Application Editor workspace, find **Entities** in the left-hand menu panel, then click the plus sign.
-2.	In the **Add a new Entity** dialog box, type "Date" as the entity name.
+2.	In the **Add a new Entity** dialog box, type "Location" as the entity name.
 3.	Click the plus sign next to the **Entity Children**.
-4.	In the text box that appears, type the name of the first child, "StartDate".
-5.	Click the plus sign again to add the second child, “EndDate”, and so on.
+4.	In the text box that appears, type the name of the first child, "ToLocation".
+5.	Click the plus sign again to add the second child, “FromLocation”, and so on.
 6.	To delete a child, if you made a mistake, click the trash can sign next to the entity child.
 7.	When finished, click "**Save**".
 
@@ -48,7 +50,7 @@ Using the “Date” example mentioned above, follow these steps.
 
 ######Labeling Children
   
-1. Type any utterance like “Find news about Obama publish from 12 July 2014 till 12 August 2014”
+1. Click **New utterance**, then type an utterance like “Book me a flight to Paris”
 2. Mark the entity “12 July 2014”, click on the arrow  beside the Parent, Date, Entity to display its children.
 3. Select the child entity.
 4. Submit the utterance.
@@ -57,14 +59,52 @@ Using the “Date” example mentioned above, follow these steps.
 
  * You may add up to 10 children types for each parent entity.
  * When adding children, make sure you add them at the same time you are creating the parent entity.
- * To delete an entity with its children, click the entity name at the left corner, and then click "Delete" in the dialog box.
+ * To delete an entity with its children, click the entity name at the left-hand panel, and then click "Delete" in the dialog box.
 
 ######JSON Response
 
-Below you find an example of the Hierarchical Entities and their children as JSON output. Click "Publish" on the left-hand panel, then click "Update published application". 
+Below you find an example of the Hierarchical Entities and their children as JSON output. Click "Publish" in the upper left-hand corner of the panel, then click "Update published application". 
 
-1. Set the URL parameter "q" to be your question/utterance, for example, "Find news about Paris from 12 July 2014 till 12 August 2015".
-2. Hit the "Enter" key or click on the generated URL in the dialog. 
+1. Set the URL parameter "q" to be your question/utterance, for example, "Book me a flight to Boston on May 4".
+2. Hit the "Enter" key or click on the generated URL in the dialog box. 
+```
+{
+  "query": "Book me a flight to Boston on May 4",
+  "intents": [
+    {
+      "intent": "BookFlight",
+      "score": 0.979744732
+    },
+    {
+      "intent": "None",
+      "score": 0.120113634
+    },
+    {
+      "intent": "GetWeather",
+      "score": 9.00356056E-08
+    }
+  ],
+  "entities": [
+    {
+      "entity": "boston",
+      "type": "Location::ToLocation",
+      "startIndex": 20,
+      "endIndex": 25,
+      "score": 0.9935189
+    },
+    {
+      "entity": "may 4",
+      "type": "builtin.datetime.date",
+      "startIndex": 30,
+      "endIndex": 34,
+      "resolution": {
+        "date": "XXXX-05-04"
+      }
+    }
+  ]
+}
+
+```
 
 ######Using Bing Entities
 
