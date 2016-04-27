@@ -21,7 +21,9 @@ In the application, you will bundle together the intents and entities that are i
 ###Step 1: Creating an Application
 
 Click on **My Applications** and then the **New Application** button to create a new application. In the dialog box, name it "TravelAgent". Check that the application culture is set to English. Then click **Add App**. 
+
 ![New LUIS Application](./Images/NewApplication.PNG) 
+
 This creates the application and takes you to the LUIS Application Editor.
 
 ###Step 2: Adding entities, intents, and labels
