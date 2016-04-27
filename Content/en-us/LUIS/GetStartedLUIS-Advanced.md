@@ -21,7 +21,7 @@ Once a developer creates one or more entities and starts creating intents, he/sh
 6. Add a third parameter "Date" with "datetime" being the entity.
 7. Check the **Required** check box next to the name of the parameter that is required for the action to trigger.
 
-![Adding Action Binding](AddActionBinding.PNG)
+![Adding Action Binding](./Images/AddActionBinding.PNG)
 
 **Notes:**
 To delete a parameter, click on the trashcan next to its field. To delete an action with its parameters, click **Delete Action** from inside the **Add a new intent** dialog box.
