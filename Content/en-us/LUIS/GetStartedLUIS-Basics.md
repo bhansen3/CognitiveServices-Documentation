@@ -42,8 +42,6 @@ Click on "Location", and you'll see the word "Seattle" highlighted in yellow, in
 
 Next, add a second intent called "GetWeather", with the example "How is the weather in London". Label "London" as a "Location" entity, and click **Submit**.
 
-![Pre-built example](./Images/prebuilt-example.png)
-
 ######Defining Entities
   
 On the left-hand panel, you will see an option to add entities. We'd like to be able to say what kind of travels we are interested in, and also, for planning purposes, to get an idea of what the weather is like at our travel destination. In order to capture the topic of "location", let's create the entity type: "Location". To do this, click the "**+**" button on the **Entities** bar, and fill in the resulting text entry box for "Location". 
