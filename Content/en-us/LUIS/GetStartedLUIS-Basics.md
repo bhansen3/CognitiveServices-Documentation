@@ -36,7 +36,7 @@ Go ahead and click **+** next to **Intents**. You'll see a dialog box appear to 
 
 Then click **Save**, and the utterance will be presented for labeling. The intent "BookFlight" (just click on it) will be highlighted, and you will see a drop-down with the entities you've defined. 
 
-![Labeling Entities](./Images/BookFlightEntity.PNG)
+![Labeling Entents](./Images/BookFlightIntent.PNG)
 
 Click on "Location", and you'll see the word "Seattle" highlighted in yellow, indicating that you've labeled the word "Seattle" as a "Location". Choose whether it is a ToLocation or FromLocation, then click **Submit** to submit this label. 
 
