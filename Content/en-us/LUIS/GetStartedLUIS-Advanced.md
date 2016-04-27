@@ -53,7 +53,7 @@ Testing the query "BookFlight". Here is the JSON response extract for the dialog
 ```
         "dialog": 
   {
-    "prompt": "Please provide a departure location?",
+    "prompt": "From where?",
     "parameterName": "FromLocation::FromLocation",
     "contextId": "09629512-7310-4a9d-9411-57e1d7f8022b",
     "status": "Question"
@@ -70,7 +70,7 @@ Here is the JSON repsonse for the following Dialog question:
 ```
     "dialog":  
  {
-    "prompt": "Please provide a departure date?",
+    "prompt": "Which date?",
     "parameterName": "Date::datetime",
     "contextId": "2e48c7e0-d343-465f-ab0d-03a7598b655f",
     "status": "Question"
