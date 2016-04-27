@@ -48,14 +48,7 @@ Using the “Location” example mentioned above, follow these steps.
 6.	To delete a child, if you made a mistake, click the trash can sign next to the entity child.
 7.	When finished, click "**Save**".
 
-![Hierarchical Entities](./Images/AuthoringHierarchicalEntities.jpg)
-
-######Labeling Children
-  
-1. Click **New utterance**, then type an utterance like “Book me a flight to Paris”
-2. Mark the entity “12 July 2014”, click on the arrow  beside the Parent, Date, Entity to display its children.
-3. Select the child entity.
-4. Submit the utterance.
+![Hierarchical Entities](./Images/ToandFromLocations.PNG)
 
 ######Important Notes
 
