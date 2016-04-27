@@ -38,8 +38,6 @@ Then click **Save**, and the utterance will be presented for labeling. The inten
 
 ![Labeling Entents](./Images/BookFlightIntent.PNG)
 
-Click on "Location", and you'll see the word "Seattle" highlighted in yellow, indicating that you've labeled the word "Seattle" as a "Location". Choose whether it is a ToLocation or FromLocation, then click **Submit** to submit this label. 
-
 Next, add a second intent called "GetWeather", with the example "How is the weather in London". Label "London" as a "Location" entity, and click **Submit**.
 
 ######Defining Entities
@@ -123,7 +121,7 @@ Below you find an example of the Hierarchical Entities and their children as JSO
 
 ###Step 3: Seeding the System
 
-Now that we have a set of intents and entities defined, the next step is to provide some more examples of utterances that illustrate these concepts. Click on the **New Utterances** tab at the top of the screen. Type "Book a flight to africa" into the entry box and hit enter. You will see a dropdown box showing the possible intents. Select "BookFlight" and note that "africa" is the location of the flight destinations we want. Click on "africa" and then select "Location" from the dropdown box. 
+Now that we have a set of intents and entities defined, the next step is to provide some more examples of utterances that illustrate these concepts. Click on the **New Utterances** tab at the top of the screen. Type "Book a flight to africa" into the entry box and hit enter. You will see a dropdown box showing the possible intents. Select "BookFlight" and note that "africa" is the location of the flight destinations we want. Click on "africa" and then select "Location" from the dropdown box. Click on "Location", and you'll see the word "Africa" highlighted in yellow, indicating that you've labeled the word "Africae" as a "Location". Choose whether it is a ToLocation or FromLocation, then click **Submit** to submit this label. 
 
 The system needs to be seeded with several examples of each intent, and several examples of each entity. As an example of a **None** intent, enter "I like chocolate cake". Now think of several more examples of each intent, and enter them. 
 
