@@ -68,9 +68,10 @@ Once our app shows a set of travel booking requests, we might want to say someth
 
 ![DateTime Pre-built Entities](./Images/Date-timePre-builtEntity.PNG)
 
-######Important Notes
+######Important Notes on Entity Limits
 
- * You may add up to 10 children types for each parent entity.
+ * Up to 20 entities of each type can be used in a single LUIS application.
+ * Up to 10 children types for each parent entity may be used.
  * When adding children, make sure you add them at the same time you are creating the parent entity.
  * To delete an entity with its children, click the entity name at the left-hand panel, and then click "Delete" in the dialog box.
 
