@@ -26,7 +26,23 @@ Click on **My Applications** and then the **New Application** button to create a
 
 This creates the application and takes you to the LUIS Application Editor.
 
-###Step 2: Adding entities, intents, and labels
+###Step 2: Adding intents, entities and labels
+
+######Defining Intents and labeling utterances
+
+Next, we will add two intents to the application. At the top left of the menu panel, you will see an area for intents. All applications come with one pre-defined intent, **None**. This will recognize user statements that have nothing to do with the application, for example if someone says "How far is it to the moon". 
+
+Go ahead and click **+** next to **Intents**. You'll see a dialog box appear to add a new intent. Enter the intent name of "BookFlight", and the example command that triggers the intent as "Book flight to Paris". This will look like the screen below. 
+
+Then click **Save**, and the utterance will be presented for labeling. The intent "BookFlight" (just click on it) will be highlighted, and you will see a drop-down with the entities you've defined. 
+
+![Labeling Entities](./Images/BookFlightEntity.PNG)
+
+Click on "Location", and you'll see the word "Seattle" highlighted in yellow, indicating that you've labeled the word "Seattle" as a "Location". Choose whether it is a ToLocation or FromLocation, then click **Submit** to submit this label. 
+
+Next, add a second intent called "GetWeather", with the example "How is the weather in London". Label "London" as a "Location" entity, and click **Submit**.
+
+![Pre-built example](./Images/prebuilt-example.png)
 
 ######Defining Entities
   
@@ -49,6 +65,12 @@ Using the “Location” example mentioned above, follow these steps.
 7.	When finished, click "**Save**".
 
 ![Hierarchical Entities](./Images/ToandFromLocations.PNG)
+
+######Using Bing Entities
+
+Once our app shows a set of travel booking requests, we might want to say something like "Book me a flight to Boston on May 4". This will require understanding date words like the names of the months, for example "May", "June", dates of the month and year and so on. Rather than specifying these by hand, we can use a pre-built entity model called **DateTime**. Click the button for **Prebuilt Entities** and select **DateTime** from the dropdown menu.
+
+![DateTime Pre-built Entities](./Images/Date-timePre-builtEntity.PNG)
 
 ######Important Notes
 
@@ -101,33 +123,11 @@ Below you find an example of the Hierarchical Entities and their children as JSO
 
 ```
 
-######Using Bing Entities
-
-Once our app shows a set of travel booking requests, we might want to say something like "Book me a flight to Boston on May 4". This will require understanding date words like the names of the months, for example "May", "June", dates of the month and year and so on. Rather than specifying these by hand, we can use a pre-built entity model called **DateTime**. Click the button for **Prebuilt Entities** and select **DateTime** from the dropdown menu.
-
-![DateTime Pre-built Entities](./Images/Date-timePre-builtEntity.PNG)
-
-######Defining Intents and labeling utterances
-
-Next, we will add two intents to the application. At the top left of the menu panel, you will see an area for intents. All applications come with one pre-defined intent, **None**. This will recognize user statements that have nothing to do with the application, for example if someone says "How far is it to the moon". 
-
-Go ahead and click **+** next to **Intents**. You'll see a dialog box appear to add a new intent. Enter the intent name of "BookFlight", and the example command that triggers the intent as "Book flight to Paris". This will look like the screen below. 
-
-Then click **Save**, and the utterance will be presented for labeling. The intent "BookFlight" (just click on it) will be highlighted, and you will see a drop-down with the entities you've defined. 
-
-![Labeling Entities](./Images/labeling.png)
-
-Click on "Location", and you'll see the word "Paris" highlighted in red, indicating that you've labeled the word "Paris" as a "Location". Now click **Submit** to submit this label. 
-
-Next, add a second intent called "GetWeather", with the example "How is the weather in Seattle". Label "Seattle" as a "Location" entity, and click **Submit**.
-
-![Pre-built example](./Images/prebuilt-example.png)
-
 ###Step 3: Seeding the System
 
-Now that we have a set of intents and entities defined, the next step is to provide some more examples of utterances that illustrate these concepts. Click on the **New Utterances** tab at the top of the screen. Type "Search for news about africa" into the entry box and hit enter. You will see a dropdown box showing the possible intents. Select "FindNews". Note that "africa" is the topic of the news stories we want. Click on "africa" and then select "Topic" from the dropdown box. 
+Now that we have a set of intents and entities defined, the next step is to provide some more examples of utterances that illustrate these concepts. Click on the **New Utterances** tab at the top of the screen. Type "Book a flight to africa" into the entry box and hit enter. You will see a dropdown box showing the possible intents. Select "BookFlight" and note that "africa" is the location of the flight destinations we want. Click on "africa" and then select "Location" from the dropdown box. 
 
-The system needs to be seeded with several examples of each intent, and several examples of each entity. Enter "Share that with Katie", select "ShareNews" as the intent, and label "Katie" as the recipient. Enter "read it" and label that as an example of "Read". As an example of a **None** intent, enter "I like chocolate cake". Now think of several more examples of each intent, and enter them. 
+The system needs to be seeded with several examples of each intent, and several examples of each entity. As an example of a **None** intent, enter "I like chocolate cake". Now think of several more examples of each intent, and enter them. 
 
 The system has now been seeded with enough data to deploy an initial application. That is done by training and publishing a model.
 
