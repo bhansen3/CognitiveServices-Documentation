@@ -74,6 +74,7 @@ Once our app shows a set of travel booking requests, we might want to say someth
  * Up to 10 children types for each parent entity may be used.
  * When adding children, make sure you add them at the same time you are creating the parent entity.
  * To delete an entity with its children, click the entity name at the left-hand panel, and then click "Delete" in the dialog box.
+ * Each LUIS application has a limit of 5000 phrases/utterances in total.
 
 ######Retrieving and Understanding the JSON Response
 
