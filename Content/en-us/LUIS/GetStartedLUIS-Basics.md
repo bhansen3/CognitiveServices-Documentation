@@ -75,9 +75,10 @@ Once our app shows a set of travel booking requests, we might want to say someth
  * When adding children, make sure you add them at the same time you are creating the parent entity.
  * To delete an entity with its children, click the entity name at the left-hand panel, and then click "Delete" in the dialog box.
 
-######JSON Response
+######Retrieving and Understanding the JSON Response
 
-Below you find an example of the Hierarchical Entities and their children as JSON output. Click "Publish" in the upper left-hand corner of the panel, then click "Update published application". 
+Below you find an example of Intents and Hierarchical Entities and their children as JSON output. 
+First click "Publish" in the upper left-hand corner of the menu panel, then click "Update published application". 
 
 1. Set the URL parameter "q" to be your question/utterance, for example, "Book me a flight to Boston on May 4".
 2. Hit the "Enter" key or click on the generated URL in the dialog box. 
@@ -119,6 +120,14 @@ Below you find an example of the Hierarchical Entities and their children as JSO
 }
 
 ```
+Field 	| Json type	| Content in example
+------|------|------|
+Query	| string	| User Input: "Book me a flight to Boston on May 4"
+Intents	| string	| "BookFlight", "None", "GetWeather"
+Score	| number	| Confidence score, between 0 and 1. Only the highest score is listed. Weather score different.
+Entities	 | string	| "boston"; Type: Location::ToLocation. "may 4"; Type: builtin.datetime.date
+Score |	number	|  Confidence score, between 0 and 1. Only the highest score is listed.
+"date"	| string	| "XXXX-05-04"
 
 ###Step 3: Seeding the System
 
