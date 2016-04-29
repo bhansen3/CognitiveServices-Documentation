@@ -105,7 +105,7 @@ For this option, all other query parameters {visualFeatures, details} are not va
 GET https://api.projectoxford.ai/vision/v1.0/models 
 var models = await visionClient.ListModelsAsync();
 ```
-**Option Two:** Enhanced Analysis - Analyze to provide additional details with [86-categories taxonomy](./Images/86categories.md)
+**Option Two:** Enhanced Analysis - Analyze to provide additional details with [86-categories taxonomy](./Images/Vision API for Build-16.docx)
 
 For applications where you want to get generic image analysis in addition to details from one or more domain-specific models, we extend the v1 API with the models query parameter.
 ```
