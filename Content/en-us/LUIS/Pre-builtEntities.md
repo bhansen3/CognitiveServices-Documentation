@@ -7,7 +7,7 @@ Weight: 90 -->
 
 LUIS includes a set of pre-built entities. When a pre-built entity is included in your application, its predictions will be included in your published application and be available to you in the LUIS web UI while labeling utterances. The behavior of pre-built entities cannot be modified. Unless otherwise noted, each pre-built entity is available in all LUIS application locales (cultures). 
 
-Below is a table of pre-built entities with example utterances and their return values.
+######Below is a table of pre-built entities with example utterances and their return values.
 
 Pre-built entity   |   Example utterance   |   JSON
 ------|------|------|
@@ -23,9 +23,9 @@ Pre-built entity   |   Example utterance   |   JSON
  builtin.money     |   $ 67.5 B   |```{ "type": "builtin.money", "entity": "$ 67.5" }```|
  builtin.age   |   100 year old   |```{ "type": "builtin.age", "entity": "100 year old" }```|  
  builtin.age   |   19 years old   |```{ "type": "builtin.age", "entity": "19 years old" }```|
- builtin.datetime | See separate table below | See separate table below |
- builtin.geography | See separate table below | See separate table below |
- builtin.encyclopedia | See separate table below | See separate table below |
+ builtin.datetime | See separate table | See separate table below |
+ builtin.geography | See separate table | See separate table below |
+ builtin.encyclopedia | See separate table | See separate table below |
  
  The last 3 built-in entity types encompass multiple subtypes. These are covered next.
  
@@ -54,3 +54,18 @@ builtin.datetime.set    |   daily   |```{ "type": "builtin.datetime.set", "entit
 builtin.datetime.set    |   every morning   |```{ "type": "builtin.datetime.set", "entity": "every morning", "resolution": {"time": "XXXX-XX-XXTMO"}	}```|
 builtin.datetime.set    |   every tuesday   |```{ "entity": "every tuesday", "type": "builtin.datetime.set", "resolution":  {"time": "XXXX-WXX-2"} }```|   
 builtin.datetime.set    |   every week   |```{ "entity": "every week", "type": "builtin.datetime.set", "resolution": {"time": "XXXX-WXX"} }```|
+
+###builtin.geography
+
+Note: builtin.geography is available only in en-us.
+
+######The builtin.geography built-in entity type has 3 sub-types:
+
+Pre-built entity   |   Example utterance   |   JSON
+------|------|------|
+builtin.geography.city   |  seattle    |```{ "type": "builtin.geography.city", "entity": "seattle" }```|
+builtin.geography.city   |  paris    |```{ "type": "builtin.geography.city", "entity": "paris" }```|
+builtin.geography.country|  australia    |```{ "type": "builtin.geography.country", "entity": "australia" }```|
+builtin.geography.country|  japan    |```{ "type": "builtin.geography.country", "entity": "japan" }```|
+builtin.geography.pointOfInterest   |   amazon river |```{ "type": "builtin.geography.pointOfInterest", "entity": "amazon river" }```|
+builtin.geography.pointOfInterest   |   sahara desert|```{ "type": "builtin.geography.pointOfInterest", "entity": "sahara desert" }```|
