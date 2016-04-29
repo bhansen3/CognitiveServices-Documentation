@@ -36,7 +36,7 @@ In the examples below, the following features are demonstrated:
 Features are broken down on:
 
   * **Option One:** Scoped Analysis - Analyze only a given model
-  * **Option Two:** Enhanced Analysis - Analyze to provide additional details with [86-categories taxonomy](./Images/86categories.md)
+  * **Option Two:** Enhanced Analysis - Analyze to provide additional details with [86-categories taxonomy](./Images/86-categories.docx)
   
 ###<a name="Step1">Step 1: Authorize the API call</a> 
 Every call to the Computer Vision API requires a subscription key. This key needs to be either passed through a query string parameter or specified in the request header. 
