@@ -69,3 +69,128 @@ builtin.geography.country|  australia    |```{ "type": "builtin.geography.countr
 builtin.geography.country|  japan    |```{ "type": "builtin.geography.country", "entity": "japan" }```|
 builtin.geography.pointOfInterest   |   amazon river |```{ "type": "builtin.geography.pointOfInterest", "entity": "amazon river" }```|
 builtin.geography.pointOfInterest   |   sahara desert|```{ "type": "builtin.geography.pointOfInterest", "entity": "sahara desert" }```|
+
+###builtin.encyclopedia
+
+Note: builtin.encyclopedia is available only in en-us.
+
+######The builtin.encyclopedia built-in entity includes over 100 sub-types, listed below. In addition, encyclopedia entities often map to multiple types. For example, the query Ronald Reagan yields: 
+
+```{
+      "entity": "ronald reagan",
+      "type": "builtin.encyclopedia.people.person"
+    },
+    {
+      "entity": "ronald reagan",
+      "type": "builtin.encyclopedia.film.actor"
+    },
+    {
+      "entity": "ronald reagan",
+      "type": "builtin.encyclopedia.government.us_president"
+    },
+    {
+      "entity": "ronald reagan",
+      "type": "builtin.encyclopedia.book.author"
+    }
+
+```
+Pre-built entity   |   Pre-built entity (sub-types)   |   Example utterance
+------|------|------|
+builtin.encyclopedia.people.person  |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.people.person   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.organization.organization   |    |   
+builtin.encyclopedia.time.event   |    |   
+builtin.encyclopedia.time.event   |    |   
+builtin.encyclopedia.time.event   |    |   
+builtin.encyclopedia.tv.series_episode   |    |   
+builtin.encyclopedia.tv.series_episode   |    |   
+builtin.encyclopedia.commerce.consumer_product   |    |   
+builtin.encyclopedia.commerce.consumer_product   |    |   
+builtin.encyclopedia.commerce.consumer_product   |    |   
+builtin.encyclopedia.commerce.consumer_product   |    |   
+builtin.encyclopedia.commerce.consumer_product   |    |   
+builtin.encyclopedia.commerce.brand   |    |   
+builtin.encyclopedia.commerce.brand   |    |   
+builtin.encyclopedia.music.artist   |    |   
+builtin.encyclopedia.music.artist   |    |   
+builtin.encyclopedia.music.music_video   |    |   
+builtin.encyclopedia.theater.play   |    |   
+builtin.encyclopedia.sports.fight_song   |    |   
+builtin.encyclopedia.film.series   |    |   
+builtin.encyclopedia.tv.program   |    |   
+builtin.encyclopedia.radio.radio_program   |    |   
+builtin.encyclopedia.film.film   |    |   
+builtin.encyclopedia.cricket.tournament   |    |   
+builtin.encyclopedia.government.government   |    |   
+builtin.encyclopedia.sports.team_owner   |    |   
+builtin.encyclopedia.music.genre   |    |   
+builtin.encyclopedia.ice_hockey.division   |    |   
+builtin.encyclopedia.architecture.style   |    |   
+builtin.encyclopedia.broadcast.producer   |    |   
+builtin.encyclopedia.book.author   |    |   
+builtin.encyclopedia.religion.founding_figur   |    |   
+builtin.encyclopedia.martial_arts.martial_art   |    |   
+builtin.encyclopedia.sports.school   |    |   
+builtin.encyclopedia.business.product_line   |    |   
+builtin.encyclopedia.internet.website   |    |   
+builtin.encyclopedia.time.holiday   |    |   
+builtin.encyclopedia.food.candy_bar   |    |   
+builtin.encyclopedia.finance.stock_exchange   |    |   
+builtin.encyclopedia.film.festival   |    |   
+
+
+
