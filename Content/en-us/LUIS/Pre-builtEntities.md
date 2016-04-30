@@ -92,8 +92,8 @@ Note: builtin.encyclopedia is available only in en-US.
       "entity": "ronald reagan",
       "type": "builtin.encyclopedia.book.author"
     }
-
 ```
+
 Pre-built entity   |   Pre-built entity (sub-types)   |   Example utterance
 ------|------|------|
 builtin.encyclopedia.people.person   |  builtin.encyclopedia.people.person  |   bryan adams |
