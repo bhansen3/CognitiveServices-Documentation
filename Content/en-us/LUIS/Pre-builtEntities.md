@@ -75,7 +75,7 @@ builtin.geography.pointOfInterest   |   sahara desert|```{ "type": "builtin.geog
 Note: builtin.encyclopedia is available only in en-US.
 
 ######The builtin.encyclopedia built-in entity includes over 100 sub-types, listed below. In addition, encyclopedia entities often map to multiple types. For example, the query Ronald Reagan yields: 
-
+```
 {
       "entity": "ronald reagan",
       "type": "builtin.encyclopedia.people.person"
@@ -92,6 +92,7 @@ Note: builtin.encyclopedia is available only in en-US.
       "entity": "ronald reagan",
       "type": "builtin.encyclopedia.book.author"
     }
+ ```
 
 ###New table
 
