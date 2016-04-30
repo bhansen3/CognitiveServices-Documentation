@@ -120,6 +120,8 @@ builtin.encyclopedia.people.person   |  builtin.encyclopedia.ice_hockey.player  
 builtin.encyclopedia.people.person   |  builtin.encyclopedia.government.politician   |  harold nicolson   |   
 builtin.encyclopedia.people.person   |  builtin.encyclopedia.government.us_president   |  barack obama   |   
 builtin.encyclopedia.people.person   |  builtin.encyclopedia.government.us_vice_president   |  dick cheney   |   
+
+
 builtin.encyclopedia.organization.organization   |  builtin.encyclopedia.organization.organization   |  united nations   |   
 builtin.encyclopedia.organization.organization   |  builtin.encyclopedia.sports.league   |  american league   |   
 builtin.encyclopedia.organization.organization   |  builtin.encyclopedia.ice_hockey.conference   |  western hockey league   |   
