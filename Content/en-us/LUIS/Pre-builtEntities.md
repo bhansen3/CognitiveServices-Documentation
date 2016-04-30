@@ -93,6 +93,7 @@ Note: builtin.encyclopedia is available only in en-US.
       "type": "builtin.encyclopedia.book.author"
     }
 ```
+###New table
 
 Pre-built entity   |   Pre-built entity (sub-types)   |   Example utterance
 ------|------|------|
