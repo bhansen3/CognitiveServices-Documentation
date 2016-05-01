@@ -26,7 +26,7 @@ Once a developer creates one or more entities and starts creating intents, he/sh
 **Notes:**
 To delete a parameter, click on the trashcan next to its field. To delete an action with its parameters, click **Delete Action** from inside the **Add a new intent** dialog box.
 
-Schematized JSON response
+###Schematized JSON response
 
 This is a sample extract of the JSON response that is returned when an action is fulfilled: 
 ```
@@ -71,7 +71,7 @@ This is a sample extract of the JSON response that is returned when an action is
 
 Notice that the "Publication Date" and "Subject" required parameters are set to TRUE, which means they are filled in. Thus the action will be triggered as all its required parameters are available. Notice also that the action triggering is set to TRUE. Finally, notice that the "Publisher" parameter is set to FALSE, which means that it is not required for the action to be triggered. 
 
-Action Fulfillment (Preview)
+###Action Fulfillment (Preview)
 
 This feature enables you to fulfill the actions that trigged through a set of channels (Full channel list below). For example, if you have the GetWeather intent and the action triggered (all the required parameters were filled), you can actually use the GetCurrentWeather channel to retrieve the weather. 
 
