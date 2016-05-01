@@ -27,7 +27,7 @@ Pre-built entity   |   Example utterance   |   JSON
  builtin.geography | See separate table | See separate table below |
  builtin.encyclopedia | See separate table | See separate table below |
  
- The last 3 built-in entity types encompass multiple subtypes. These are covered next.
+ The last 3 built-in entity types listed in the table above encompass multiple subtypes. These are covered next.
  
 ###builtin.datetime
 
