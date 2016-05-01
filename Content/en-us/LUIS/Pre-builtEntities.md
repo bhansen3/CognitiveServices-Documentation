@@ -94,7 +94,6 @@ Note: builtin.encyclopedia is available only in en-US.
     }
  ```
 
-###New table
 
 Pre-built entity   |   Pre-built entity (sub-types)   |   Example utterance
 ------|------|------|
