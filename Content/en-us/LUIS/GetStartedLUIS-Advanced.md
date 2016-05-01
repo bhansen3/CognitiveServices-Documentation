@@ -29,6 +29,7 @@ To delete a parameter, click on the trashcan next to its field. To delete an act
 Schematized JSON response
 
 This is a sample extract of the JSON response that is returned when an action is fulfilled: 
+```
 "actions": [
         {
           "triggered": true,
@@ -65,7 +66,7 @@ This is a sample extract of the JSON response that is returned when an action is
         }
       ]
     }
-
+```
 
 
 Notice that the "Publication Date" and "Subject" required parameters are set to TRUE, which means they are filled in. Thus the action will be triggered as all its required parameters are available. Notice also that the action triggering is set to TRUE. Finally, notice that the "Publisher" parameter is set to FALSE, which means that it is not required for the action to be triggered. 
@@ -76,19 +77,18 @@ This feature enables you to fulfill the actions that trigged through a set of ch
 
 ![Action Fulfillment](./Images/AddFulfillment.png)
 
-Follow these steps (see previous screenshot): 
+Follow these steps (see above screenshot): 
+
 1. In the Application Editor workspace, find Intents in the left-hand menu panel, then click the intent for which you want to bind an action, in this case “Get temperature”. 
-2.In the Add a new Intent dialog box, click Add Action. This will open the dialog box as shown in Figure 1.
-3.Check Fulfillment in the Action Info sub-section to enable action types.
-4.From the Action Type dropdown list select GetCurrentWeather.
-5.In the Action Parameters sub-section, click Add Parameter to add a new line.
+2. In the Add a new Intent dialog box, click Add Action. This will open the dialog box as shown in Figure 1.
+3. Check Fulfillment in the Action Info sub-section to enable action types.
+4. From the Action Type dropdown list select GetCurrentWeather.
+5. In the Action Parameters sub-section, click Add Parameter to add a new line.
 6. Check the box if the parameter is required, add parameter name, type, value and a text prompt, which is displayed if the parameter is not identified with the intent. (In above screenshot: “required”, “location”, “location”, “locations”, “Which place?”) 
-7.In the Action Settings sub-section, map the action to a parameter from the dropdown list, in this case “location”.
-8.Click Save to complete and exit.
+7. In the Action Settings sub-section, map the action to a parameter from the dropdown list, in this case “location”.
+8. Click Save to complete and exit.
 
-
-LUIS is providing a first set of channels and actions, expect more soon.
-
+LUIS is providing a first set of channels and actions, expect more soon. LINK
 
 ###Dialog Support (Preview)
 
