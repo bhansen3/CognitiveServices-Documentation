@@ -66,7 +66,7 @@ Using the “Location” example mentioned above, follow these steps.
 
 Once our app shows a set of travel booking requests, we might want to say something like "Book me a flight to Boston on May 4". This will require understanding date words like the names of the months, for example "May", "June", dates of the month and year and so on. Rather than specifying these by hand, we can use a pre-built entity model called **DateTime**. Click the button for **Prebuilt Entities** and select **DateTime** from the dropdown menu.
 
-For a full list of pre-built Bing entities and their use, see {Pre-built Entities](Pre-builtEntities.md).
+For a full list of pre-built Bing entities and their use, see [Pre-built Entities](Pre-builtEntities.md).
 
 ![DateTime Pre-built Entities](./Images/Date-timePre-builtEntity.PNG)
 
