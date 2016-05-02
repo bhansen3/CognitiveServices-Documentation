@@ -52,7 +52,7 @@ This is an example extract of the JSON response that is returned when an action 
 "actions": [
         {
           "triggered": true,
-          "name": "Get_weather",
+          "name": "Get_temperature",
           "parameters": [
             {
               "name": "location",
