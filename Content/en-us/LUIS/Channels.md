@@ -19,18 +19,17 @@ The definition channel returns definitions for given words.
 Actions
 
 
----Action Name---|---Action Settings---|---Values---|---Examples---|
+   Action Name   |   Action Settings   |   Values   |   Examples|
 |------|------|------|-------|
-
-GetDefinition | Entity*  | --  |What is the definition for apple? What does emotion mean?|
+GetDefinition  | Entity*  | --  | What is the definition for apple? What does emotion mean? |
 
 Prebuilt app
 
 You can download a prebuilt app supporting our sample utterances for this action [here](https://www.luis.ai/Content/sampleApps/Build_Define_v1.1.json).
 
-HTTP Channel
+###HTTP Channel
 
-Description
+######Description
 
 The HTTP channel is a generic channel to enable bindings to arbitrary REST endpoints. It is the most flexible channel that can be adapted to the needs of your service. It supports both anonymous requests and basic authorization headers. 
 
