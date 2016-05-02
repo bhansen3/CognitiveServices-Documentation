@@ -16,7 +16,7 @@ To use LUIS, first make sure that you have an up-to-date version of Microsoft Ed
 ###Creating your first LUIS Application
 
 All LUIS applications are centered around a domain-specific topic, for example booking of tickets, flights, hotels, rental cars etc. or content related to exercising, tracking fitness efforts and setting goals. You need to decide on a domain-specific topic before you can create your LUIS application. In this case, let's take the example of a virtual travel booking agency application.
-In the application, you will bundle together the intents and entities that are important to your task. Two intents relevant to the domain of travel booking are "BookFlight" and "GetWeather". Two entities that are important are "Location" and "DateTime". Once we have identified the intents and entities, we can take an appropriate action, when a user interacts with the application. 
+In the application, you will bundle together the intents and entities that are important to your task. Two intents relevant to the domain of travel booking are "BookFlight" and "GetWeather". Two entities that are important are "Location" and "DateTime". Once you have identified the intents and entities, it is possible to take appropriate action, when a user interacts with the application. 
 
 ###Step 1: Creating an Application
 
@@ -46,7 +46,7 @@ On the left-hand panel, you will see an option to add entities. We'd like to be 
 
 ######Hierarchical Entities
   
-You now have the ability to define relationships between entities based on hereditary hierarchical patterns. The generic entity acts as the parent and the children are the specific types, or sub-groups, under the parent, yet both share the same characteristics. For example, a generic entity may be called “Location” and the specific children of this parent may be called “ToLocation” and “FromLocation”. “Location”, including its children, has now been transformed from being a generic entity to being a specific entity. The LUIS service can recognize these types when labeling utterances, building models and training them for this entity and its children. 
+You now have the ability to define relationships between entities based on hereditary hierarchical patterns. The generic entity acts as the parent and the children are the specific types, or sub-groups, under the parent, yet both share the same characteristics. For example, a generic entity may be called “Location” and the specific children of this parent may be called “ToLocation” and “FromLocation”. “Location”, including its children, has now been transformed from being a generic entity to being a specific entity. The LUIS service can recognize this type of entity and its children when labeling utterances, building models and training them. 
 
 ######Defining Hierarchical Entities
   
