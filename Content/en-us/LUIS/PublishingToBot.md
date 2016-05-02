@@ -25,7 +25,7 @@ Here is how you can set up a bot in the MS Bot Framework in a few steps (see pre
 6. Finally, copy over the redirect URL provided by LUIS to your app. Unfortunately, you need this URL already during the registration step.
 When this configuration is done and the application is correctly created within the Bot Framework. In the framework there are additional steps required to enable various channels. Please follow the instructions there if you want to enable SMS or Slack. 
 
-Using the direct Slack connection
+###Using the direct Slack connection
 
 Slack is a communication platform for teams and it is getting more and more traction. For LUIS action binding we are providing a slack bot connector which you can configure with a few clicks to make it available for your teams. You just have to configure it in a way that LUIS can talk to your bot. The configuration is handling all handshaking for you. To create a bot in Slack please follow the instructions on  
 
