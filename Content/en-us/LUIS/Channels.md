@@ -35,7 +35,7 @@ The HTTP channel is a generic channel to enable bindings to arbitrary REST endpo
 
  Action Name   |   Action Settings   |   Values   |   Examples|
 |------|------|------|-------|
-JsonRequest    |    Verb*, Url*, Body, Username, Password, Response Template    |   {GET,PUT, POST, DELETE}    |   --   |
+JsonRequest    |    Verb*, Url*, Body, Username, Password, Response Template    |   ```{GET, PUT, POST, DELETE}```    |   --   |
 
 ######Additional Details
 
