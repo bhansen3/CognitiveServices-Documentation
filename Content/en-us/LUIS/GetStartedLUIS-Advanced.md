@@ -70,7 +70,7 @@ This is an example extract of the JSON response that is returned when an action 
               "required": true,
               "value": [
                 {
-                  "entity": "24 degrees C",
+                  "entity": "Get_temperature",
                   "type": "Temperature",
                   "score": 0.8523133
                 }
