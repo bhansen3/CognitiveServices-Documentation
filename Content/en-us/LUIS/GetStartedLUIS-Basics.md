@@ -11,7 +11,7 @@ LUIS lets you build your applications by using the LUIS web interface. No coding
 
 To use LUIS, first make sure that you have an up-to-date version of Microsoft Edge, Internet Explorer or Google Chrome. Go to the home page www.luis.ai and log in. You will see a screen like the one below. 
 
-![GetStarted-with-LUIS](./Images/log_in_2.png)
+![GetStarted-with-LUIS](./Images/log_in_toLUIS.png)
 
 ###Creating your first LUIS Application
 
