@@ -13,12 +13,12 @@ To use LUIS, first make sure that you have an up-to-date version of Microsoft Ed
 
 ![GetStarted-with-LUIS](./Images/log_in_toLUIS.png)
 
-###Creating your first LUIS Application
+###Creating your first LUIS application
 
 All LUIS applications are centered around a domain-specific topic, for example booking of tickets, flights, hotels, rental cars etc. or content related to exercising, tracking fitness efforts and setting goals. You need to decide on a domain-specific topic before you can create your LUIS application. In this case, let's take the example of a virtual travel booking agency application.
 In the application, you will bundle together the intents and entities that are important to your task. Two intents relevant to the domain of travel booking are "BookFlight" and "GetWeather". Two entities that are important are "Location" and "DateTime". Once you have identified the intents and entities, it is possible for LUIS to take appropriate action, when a user interacts with your application. 
 
-###Step 1: Creating an Application
+###Step 1: Creating an application
 
 Click on **My Applications** and then the **New Application** button to create a new application. In the dialog box, name it "TravelAgent". Check that the application culture is set to English. Then click **Add App**. 
 
@@ -28,7 +28,7 @@ This creates the application and takes you to the LUIS Application Editor.
 
 ###Step 2: Adding intents, entities and labels
 
-######Defining Intents and labeling utterances
+######Defining intents and labeling utterances
 
 Next, we will add two intents to the application. At the top left of the menu panel, you will see an area for intents. All applications come with one pre-defined intent, **None**. This will recognize user statements that have nothing to do with the application, for example if someone says "Get me a great cookie recipe". 
 
@@ -41,15 +41,15 @@ Click **Save**, and the utterance will be presented for labeling. The intent "Bo
 
 Next, add a second intent called "GetWeather", with the example command that triggers the intent as "How is the weather in London". Click **Save**, then continue by accepting the presented utterance as a "GetWeather" intent and click **Submit**.
 
-######Defining Entities
+######Defining entities
   
 On the left-hand panel, you will see an option to add entities. We'd like to be able to say what kind of travels we are interested in, and also, for planning purposes, to get an idea of what the weather is like at our travel destination. In order to capture the topic of "location", let's create the entity type: "Location". To do this, click the "**+**" button on the **Entities** bar, and fill in the resulting text entry box by typing "Location". You have now created a simple generic entity called "Location", often that is all you may need, but there are more advanced options.
 
-######Hierarchical Entities
+######Hierarchical entities
   
 You also have the ability to define relationships between entities based on hereditary hierarchical patterns. The generic entity acts as the parent and the children are the specific types, or sub-groups, under the parent, yet both share the same characteristics. For example, a generic entity may be called “Location” and the specific children of this parent may be called “ToLocation” and “FromLocation”. “Location”, including its children, has now been transformed from being a generic entity to being a specific entity. The LUIS service can recognize this type of entity and its children when labeling utterances, building models and training them. 
 
-######Defining Hierarchical Entities
+######Defining hierarchical entities
   
 Using the “Location” example mentioned above, follow these steps. 
 
@@ -63,7 +63,7 @@ Using the “Location” example mentioned above, follow these steps.
 
 ![Hierarchical Entities](./Images/ToandFromLocations.PNG)
 
-######Using Bing Entities
+######Using Bing entities
 
 Once your app shows a set of travel booking requests, you might want to say something like "Book me a flight to Boston on May 4". This will require understanding date words like the names of the months, for example "May", "June", dates of the month and year and so on. Rather than specifying these by hand, we can use a pre-built entity model called **datetime**. Click the **+** sign on the **Prebuilt Entities** horizontal bar and select **datetime** from the drop-down menu.
 
@@ -71,14 +71,14 @@ For a full list of pre-built Bing entities and their use, see [Pre-built Entitie
 
 ![DateTime Pre-built Entities](./Images/Date-timePre-builtEntity.PNG)
 
-######Important Notes on Entity Limits
+######Important notes on entity limits
 
  * Up to 10 entities of each type can be used in a single LUIS application.
  * Up to 10 children types for each parent entity may be used.
  * When adding children, make sure you add them at the same time you are creating the parent entity.
  * To delete an entity with its children, click the entity name in the left-hand panel, and then click "Delete" in the dialog box.
 
-###Step 3: Seeding the System by labeling utterances
+###Step 3: Seeding the system by labeling utterances
 
 With a set of intents and entities defined, the next step is to provide more examples of utterances that illustrate these concepts. Click on the **New Utterances** tab at the top of the screen. Type "Book a flight to London" into the entry box and hit **Enter**. You will see a drop-down box showing the possible intents. Select "BookFlight" by highlighting it. Click on "london" and select "Location" from the drop-down box and you'll see the word "london" highlighted in yellow, indicating that you've labeled the word "london" as a "Location". Choose whether it is a "ToLocation" or "FromLocation", then click **Submit** to submit this label. 
 
@@ -88,8 +88,17 @@ The system needs to be seeded with several examples of each intent, and several 
 
 The system has now been seeded with enough data to deploy an initial application. That is done by training and publishing a model.
 
+###Step 4: Training
 
-######Retrieving and Understanding the JSON Response
+When you "train" a model, LUIS generalizes from the examples you have labeled, and develops code to recognize the relevant intents and entities in the future. Internally, LUIS uses logistic regression classifiers to determine intents, and conditional random fields (CRFs) to determine the entities. The training process results in optimized classifiers and CRFs, referred to as models, that LUIS can use in the future. To do training, just click the **Train** button at the left bottom corner of the page. Training also occurs automatically with regular intervals. 
+
+###Step 5: Publishing a model
+
+The next step is to deploy the model to an http endpoint that will interpret the sentences we send it. Click the **Publish** button in the upper left-hand corner, and then **Publish web service** in the resulting window. After a couple of moments, you will see a url that makes your model available as a web service. LUIS will look like the below screenshot.
+
+![Publish LUIS app](./Images/LUISPublishing.PNG) 
+
+######Understanding the JSON response
 
 Below you find an example of Intents and Hierarchical Entities and their children as JSON output. 
 First click **Publish** in the upper left-hand corner of the menu panel, then click **Update published application**. 
@@ -142,24 +151,6 @@ Score	| number	| Confidence score, between 0 and 1. Only the highest score is li
 Entities	 | string	| "boston"; Type: Location::ToLocation. "may 4"; Type: builtin.datetime.date
 Score |	number	|  Confidence score, between 0 and 1. Only the highest score is listed.
 "date"	| string	| "XXXX-05-04"
-
-###Step 3: Seeding the System
-
-Now that we have a set of intents and entities defined, the next step is to provide some more examples of utterances that illustrate these concepts. Click on the **New Utterances** tab at the top of the screen. Type "Book a flight to africa" into the entry box and hit **Enter**. You will see a drop-down box showing the possible intents. Select "BookFlight" and note that "africa" is the location of the flight destinations we want. Click on "africa" and then select "Location" from the drop-down box. Click on "Location", and you'll see the word "Africa" highlighted in yellow, indicating that you've labeled the word "Africa" as a "Location". Choose whether it is a "ToLocation" or "FromLocation", then click **Submit** to submit this label. 
-
-The system needs to be seeded with several examples of each intent, and several examples of each entity. As an example of a **None** intent, enter "I like chocolate cake". Now think of several more examples of each intent, and enter them. 
-
-The system has now been seeded with enough data to deploy an initial application. That is done by training and publishing a model.
-
-###Step 4: Training
-
-When you "train" a model, LUIS generalizes from the examples you have labeled, and develops code to recognize the relevant intents and entities in the future. Internally, LUIS uses logistic regression classifiers to determine intents, and conditional random fields (CRFs) to determine the entities. The training process results in optimized classifiers and CRFs, referred to as models, that LUIS can use in the future. To do training, just click the **Train** button at the left bottom corner of the page. Training also automatically occurs periodically. 
-
-###Step 5: Publishing a Model
-
-The next step is to deploy the model to an HTTP endpoint that will interpret the sentences we send it. Click the **Publish** button in the upper left-hand corner, and then **Publish web service** in the resulting window. After a couple of moments, you will see a url that makes your models available as a web service. LUIS will look like the below screenshot.
-
-![Publish LUIS app](./Images/publish.png) 
 
 ###Summary
 
