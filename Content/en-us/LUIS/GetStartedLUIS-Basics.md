@@ -32,22 +32,22 @@ This creates the application and takes you to the LUIS Application Editor.
 
 Next, we will add two intents to the application. At the top left of the menu panel, you will see an area for intents. All applications come with one pre-defined intent, **None**. This will recognize user statements that have nothing to do with the application, for example if someone says "Get me a great cookie recipe". 
 
-Go ahead and click **+** next to **Intents**. You'll see a dialog box appear to add a new intent. Enter the intent name of "BookFlight", and the example command that triggers the intent as "Book flight to Paris". This will look like the screenshot below. 
+Go ahead and click **+** next to **Intents** on the horizontal bar. You'll see a dialog box appear to add a new intent. Enter the intent name of "BookFlight", and the example command that triggers the intent as "Book flight to Paris". This will look like the screenshot below. 
 ![Add New Intent](./Images/AddNewIntent.PNG)
 
-Then click **Save**, and the utterance will be presented for labeling. The intent "BookFlight" (just click on it) will be highlighted, and you will see a drop-down with the entities you've defined.  Click **Submit** to submit the utterance to your LUIS app.
+Click **Save**, and the utterance will be presented for labeling. The intent "BookFlight" (just click on it) will be highlighted, and you will see a drop-down with the entities you've defined.  Click **Submit** to submit the utterance to your LUIS app.
 
 ![Labeling Entents](./Images/BookFlightIntent.PNG)
 
-Next, add a second intent called "GetWeather", with the example command that triggers the intent as "How is the weather in London". Click **Save**, then continue by accepting the presented utterance as a "GetWeather" intent and clicking **Submit**.
+Next, add a second intent called "GetWeather", with the example command that triggers the intent as "How is the weather in London". Click **Save**, then continue by accepting the presented utterance as a "GetWeather" intent and click **Submit**.
 
 ######Defining Entities
   
-On the left-hand panel, you will see an option to add entities. We'd like to be able to say what kind of travels we are interested in, and also, for planning purposes, to get an idea of what the weather is like at our travel destination. In order to capture the topic of "location", let's create the entity type: "Location". To do this, click the "**+**" button on the **Entities** bar, and fill in the resulting text entry box for "Location". 
+On the left-hand panel, you will see an option to add entities. We'd like to be able to say what kind of travels we are interested in, and also, for planning purposes, to get an idea of what the weather is like at our travel destination. In order to capture the topic of "location", let's create the entity type: "Location". To do this, click the "**+**" button on the **Entities** bar, and fill in the resulting text entry box by typing "Location". You have now created a simple generic entity called "Location", often that is all you may need, but there are more advanced options.
 
 ######Hierarchical Entities
   
-You now have the ability to define relationships between entities based on hereditary hierarchical patterns. The generic entity acts as the parent and the children are the specific types, or sub-groups, under the parent, yet both share the same characteristics. For example, a generic entity may be called “Location” and the specific children of this parent may be called “ToLocation” and “FromLocation”. “Location”, including its children, has now been transformed from being a generic entity to being a specific entity. The LUIS service can recognize this type of entity and its children when labeling utterances, building models and training them. 
+You also have the ability to define relationships between entities based on hereditary hierarchical patterns. The generic entity acts as the parent and the children are the specific types, or sub-groups, under the parent, yet both share the same characteristics. For example, a generic entity may be called “Location” and the specific children of this parent may be called “ToLocation” and “FromLocation”. “Location”, including its children, has now been transformed from being a generic entity to being a specific entity. The LUIS service can recognize this type of entity and its children when labeling utterances, building models and training them. 
 
 ######Defining Hierarchical Entities
   
@@ -65,7 +65,7 @@ Using the “Location” example mentioned above, follow these steps.
 
 ######Using Bing Entities
 
-Once our app shows a set of travel booking requests, we might want to say something like "Book me a flight to Boston on May 4". This will require understanding date words like the names of the months, for example "May", "June", dates of the month and year and so on. Rather than specifying these by hand, we can use a pre-built entity model called **datetime**. Click the button for **Prebuilt Entities** and select **datetime** from the drop-down menu.
+Once your app shows a set of travel booking requests, you might want to say something like "Book me a flight to Boston on May 4". This will require understanding date words like the names of the months, for example "May", "June", dates of the month and year and so on. Rather than specifying these by hand, we can use a pre-built entity model called **datetime**. Click the **+** sign on the **Prebuilt Entities** horizontal bar and select **datetime** from the drop-down menu.
 
 For a full list of pre-built Bing entities and their use, see [Pre-built Entities](Pre-builtEntities.md).
 
@@ -73,11 +73,21 @@ For a full list of pre-built Bing entities and their use, see [Pre-built Entitie
 
 ######Important Notes on Entity Limits
 
- * Up to 20 entities of each type can be used in a single LUIS application.
+ * Up to 10 entities of each type can be used in a single LUIS application.
  * Up to 10 children types for each parent entity may be used.
  * When adding children, make sure you add them at the same time you are creating the parent entity.
  * To delete an entity with its children, click the entity name in the left-hand panel, and then click "Delete" in the dialog box.
- * Each LUIS application has a limit of 5000 phrases/utterances in total.
+
+###Step 3: Seeding the System by labeling utterances
+
+With a set of intents and entities defined, the next step is to provide more examples of utterances that illustrate these concepts. Click on the **New Utterances** tab at the top of the screen. Type "Book a flight to London" into the entry box and hit **Enter**. You will see a drop-down box showing the possible intents. Select "BookFlight" by highlighting it. Click on "london" and select "Location" from the drop-down box and you'll see the word "london" highlighted in yellow, indicating that you've labeled the word "london" as a "Location". Choose whether it is a "ToLocation" or "FromLocation", then click **Submit** to submit this label. 
+
+![Adding Utterances](./Images/BookFlightEntity)
+
+The system needs to be seeded with several examples of each intent, and several examples of each entity. Don't forget to add an example or two of a **None** intent, for example, enter "I like ice cream". Note, that LUIS converts all utterances to lower case.
+
+The system has now been seeded with enough data to deploy an initial application. That is done by training and publishing a model.
+
 
 ######Retrieving and Understanding the JSON Response
 
