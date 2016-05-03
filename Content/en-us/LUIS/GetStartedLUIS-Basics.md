@@ -52,7 +52,7 @@ You now have the ability to define relationships between entities based on hered
   
 Using the “Location” example mentioned above, follow these steps. 
 
-1.	In the Application Editor workspace, find **Entities** in the left-hand menu panel, then click the plus sign.
+1.	In the Application Editor workspace, find **Entities** in the left-hand menu panel, then click the **+** sign.
 2.	In the **Add a new Entity** dialog box, type "Location" as the entity name.
 3.	Click the plus sign next to the **Entity Children**.
 4.	In the text box that appears, type the name of the first child, "ToLocation".
@@ -64,7 +64,7 @@ Using the “Location” example mentioned above, follow these steps.
 
 ######Using Bing Entities
 
-Once our app shows a set of travel booking requests, we might want to say something like "Book me a flight to Boston on May 4". This will require understanding date words like the names of the months, for example "May", "June", dates of the month and year and so on. Rather than specifying these by hand, we can use a pre-built entity model called **DateTime**. Click the button for **Prebuilt Entities** and select **DateTime** from the dropdown menu.
+Once our app shows a set of travel booking requests, we might want to say something like "Book me a flight to Boston on May 4". This will require understanding date words like the names of the months, for example "May", "June", dates of the month and year and so on. Rather than specifying these by hand, we can use a pre-built entity model called **datetime**. Click the button for **Prebuilt Entities** and select **datetime** from the drop-down menu.
 
 For a full list of pre-built Bing entities and their use, see [Pre-built Entities](Pre-builtEntities.md).
 
@@ -81,10 +81,10 @@ For a full list of pre-built Bing entities and their use, see [Pre-built Entitie
 ######Retrieving and Understanding the JSON Response
 
 Below you find an example of Intents and Hierarchical Entities and their children as JSON output. 
-First click "Publish" in the upper left-hand corner of the menu panel, then click "Update published application". 
+First click **Publish** in the upper left-hand corner of the menu panel, then click **Update published application**. 
 
-1. Set the URL parameter "q" to be your question/utterance, for example, "Book me a flight to Boston on May 4".
-2. Hit the "Enter" key or click on the generated URL in the dialog box. 
+1. Set the URL parameter to be your question/utterance, for example, "Book me a flight to Boston on May 4".
+2. Hit the **Enter** key or click on the generated URL in the dialog box. 
 ```
 {
   "query": "Book me a flight to Boston on May 4",
@@ -134,7 +134,7 @@ Score |	number	|  Confidence score, between 0 and 1. Only the highest score is l
 
 ###Step 3: Seeding the System
 
-Now that we have a set of intents and entities defined, the next step is to provide some more examples of utterances that illustrate these concepts. Click on the **New Utterances** tab at the top of the screen. Type "Book a flight to africa" into the entry box and hit enter. You will see a dropdown box showing the possible intents. Select "BookFlight" and note that "africa" is the location of the flight destinations we want. Click on "africa" and then select "Location" from the dropdown box. Click on "Location", and you'll see the word "Africa" highlighted in yellow, indicating that you've labeled the word "Africae" as a "Location". Choose whether it is a ToLocation or FromLocation, then click **Submit** to submit this label. 
+Now that we have a set of intents and entities defined, the next step is to provide some more examples of utterances that illustrate these concepts. Click on the **New Utterances** tab at the top of the screen. Type "Book a flight to africa" into the entry box and hit **Enter**. You will see a drop-down box showing the possible intents. Select "BookFlight" and note that "africa" is the location of the flight destinations we want. Click on "africa" and then select "Location" from the drop-down box. Click on "Location", and you'll see the word "Africa" highlighted in yellow, indicating that you've labeled the word "Africa" as a "Location". Choose whether it is a "ToLocation" or "FromLocation", then click **Submit** to submit this label. 
 
 The system needs to be seeded with several examples of each intent, and several examples of each entity. As an example of a **None** intent, enter "I like chocolate cake". Now think of several more examples of each intent, and enter them. 
 
@@ -142,14 +142,14 @@ The system has now been seeded with enough data to deploy an initial application
 
 ###Step 4: Training
 
-When you "train" a model, LUIS generalizes from the examples you have labeled, and develops code to recognize the relevant intents and entities in the future. Internally, LUIS uses logistic regression classifiers to determine intents, and conditional random fields (CRFs) to determine the entities. The training process results in optimized classifiers and CRFs, referred to as models, that LUIS can use in the future. To do training, just click the **Train** button at the bottom of the page. Training also automatically occurs periodically. 
+When you "train" a model, LUIS generalizes from the examples you have labeled, and develops code to recognize the relevant intents and entities in the future. Internally, LUIS uses logistic regression classifiers to determine intents, and conditional random fields (CRFs) to determine the entities. The training process results in optimized classifiers and CRFs, referred to as models, that LUIS can use in the future. To do training, just click the **Train** button at the left bottom corner of the page. Training also automatically occurs periodically. 
 
 ###Step 5: Publishing a Model
 
-The next step is to deploy the models to an HTTP endpoint that will interpret the sentences we send it. Click the **Publish** button in the upper left-hand corner, and then **Publish web service** in the resulting window. After a couple of moments, you will see a url that makes your models available as a web service. LUIS will look like the below screenshot.
+The next step is to deploy the model to an HTTP endpoint that will interpret the sentences we send it. Click the **Publish** button in the upper left-hand corner, and then **Publish web service** in the resulting window. After a couple of moments, you will see a url that makes your models available as a web service. LUIS will look like the below screenshot.
 
 ![Publish LUIS app](./Images/publish.png) 
 
 ###Summary
 
-You have now built a basic LUIS application.
+You have now built a basic LUIS application. This application can be enhanced by adding more advanced features.
