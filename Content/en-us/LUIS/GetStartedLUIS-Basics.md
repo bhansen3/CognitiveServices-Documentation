@@ -94,16 +94,15 @@ When you "train" a model, LUIS generalizes from the examples you have labeled, a
 
 ###Step 5: Publishing a model
 
-The next step is to deploy the model to an http endpoint that will interpret the sentences we send it. Click the **Publish** button in the upper left-hand corner, and then **Publish web service** in the resulting window. After a couple of moments, you will see a url that makes your model available as a web service. LUIS will look like the below screenshot.
+The next step is to deploy the model to an HTTP endpoint that will interpret the sentences we send it. Click the **Publish** button in the upper left-hand corner, and then **Publish web service** in the resulting window. After a couple of moments, you will see a url that makes your model available as a web service. LUIS will look like the below screenshot. To acquire a subscription key, see [Creating Subscription Keys Via Azure Ibiza](AzureIbizaSubscription.md).
 
 ![Publish LUIS app](./Images/LUISPublishing.PNG) 
 
 ######Understanding the JSON response
 
-Below you find an example of Intents and Hierarchical Entities and their children as JSON output. 
-First click **Publish** in the upper left-hand corner of the menu panel, then click **Update published application**. 
+Below find an example of intents and hierarchical entities with their children as JSON output. 
 
-1. Set the URL parameter to be your question/utterance, for example, "Book me a flight to Boston on May 4".
+1. Set the URL parameter to be your query/utterance, for example, "Book me a flight to Boston on May 4", then click **Update published application**..
 2. Hit the **Enter** key or click on the generated URL in the dialog box. 
 ```
 {
@@ -111,15 +110,15 @@ First click **Publish** in the upper left-hand corner of the menu panel, then cl
   "intents": [
     {
       "intent": "BookFlight",
-      "score": 0.979744732
+      "score": 0.919818342
     },
     {
       "intent": "None",
-      "score": 0.120113634
+      "score": 0.136909246
     },
     {
       "intent": "GetWeather",
-      "score": 9.00356056E-08
+      "score": 0.007304534
     }
   ],
   "entities": [
@@ -128,7 +127,7 @@ First click **Publish** in the upper left-hand corner of the menu panel, then cl
       "type": "Location::ToLocation",
       "startIndex": 20,
       "endIndex": 25,
-      "score": 0.9935189
+      "score": 0.621795356
     },
     {
       "entity": "may 4",
@@ -143,13 +142,13 @@ First click **Publish** in the upper left-hand corner of the menu panel, then cl
 }
 
 ```
-Field 	| Json type	| Content in example
+Field 	| Json type	| Description of content in example
 ------|------|------|
-Query	| string	| User Input: "Book me a flight to Boston on May 4"
-Intents	| string	| "BookFlight", "None", "GetWeather"
-Score	| number	| Confidence score, between 0 and 1. Only the highest score is listed. Weather score different.
-Entities	 | string	| "boston"; Type: Location::ToLocation. "may 4"; Type: builtin.datetime.date
-Score |	number	|  Confidence score, between 0 and 1. Only the highest score is listed.
+Query	| string	| Query/utterance: "Book me a flight to Boston on May 4"
+Intents	| object	| All intents listed (each with their highest score): "BookFlight", "None", "GetWeather"
+Score	| number	| Confidence score, between 0 and 1. Only the highest score is listed for each intent.
+Entities	 | object	| "boston", Type: Location::ToLocation (parent::child). "may 4", Type: builtin.datetime.date
+Score |	number	|  Confidence score, between 0 and 1. Only the highest score is listed for each entity.
 "date"	| string	| "XXXX-05-04"
 
 ###Summary
