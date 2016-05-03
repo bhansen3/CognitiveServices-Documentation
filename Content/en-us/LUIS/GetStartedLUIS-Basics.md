@@ -82,7 +82,7 @@ For a full list of pre-built Bing entities and their use, see [Pre-built Entitie
 
 With a set of intents and entities defined, the next step is to provide more examples of utterances that illustrate these concepts. Click on the **New Utterances** tab at the top of the screen. Type "Book a flight to London" into the entry box and hit **Enter**. You will see a drop-down box showing the possible intents. Select "BookFlight" by highlighting it. Click on "london" and select "Location" from the drop-down box and you'll see the word "london" highlighted in yellow, indicating that you've labeled the word "london" as a "Location". Choose whether it is a "ToLocation" or "FromLocation", then click **Submit** to submit this label. 
 
-![AddingUtterances](./Images/BookFlightEntity)
+![Adding Utterances](./Images/BookFlightEntity.PNG)
 
 The system needs to be seeded with several examples of each intent, and several examples of each entity. Don't forget to add an example or two of a **None** intent, for example, enter "I like ice cream". Note, that LUIS converts all utterances to lower case.
 
