@@ -16,7 +16,7 @@ To use LUIS, first make sure that you have an up-to-date version of Microsoft Ed
 ###Creating your first LUIS Application
 
 All LUIS applications are centered around a domain-specific topic, for example booking of tickets, flights, hotels, rental cars etc. or content related to exercising, tracking fitness efforts and setting goals. You need to decide on a domain-specific topic before you can create your LUIS application. In this case, let's take the example of a virtual travel booking agency application.
-In the application, you will bundle together the intents and entities that are important to your task. Two intents relevant to the domain of travel booking are "BookFlight" and "GetWeather". Two entities that are important are "Location" and "DateTime". Once you have identified the intents and entities, it is possible to take appropriate action, when a user interacts with the application. 
+In the application, you will bundle together the intents and entities that are important to your task. Two intents relevant to the domain of travel booking are "BookFlight" and "GetWeather". Two entities that are important are "Location" and "DateTime". Once you have identified the intents and entities, it is possible for LUIS to take appropriate action, when a user interacts with your application. 
 
 ###Step 1: Creating an Application
 
@@ -30,15 +30,16 @@ This creates the application and takes you to the LUIS Application Editor.
 
 ######Defining Intents and labeling utterances
 
-Next, we will add two intents to the application. At the top left of the menu panel, you will see an area for intents. All applications come with one pre-defined intent, **None**. This will recognize user statements that have nothing to do with the application, for example if someone says "How far is it to the moon". 
+Next, we will add two intents to the application. At the top left of the menu panel, you will see an area for intents. All applications come with one pre-defined intent, **None**. This will recognize user statements that have nothing to do with the application, for example if someone says "Get me a great cookie recipe". 
 
-Go ahead and click **+** next to **Intents**. You'll see a dialog box appear to add a new intent. Enter the intent name of "BookFlight", and the example command that triggers the intent as "Book flight to Paris". This will look like the screen below. 
+Go ahead and click **+** next to **Intents**. You'll see a dialog box appear to add a new intent. Enter the intent name of "BookFlight", and the example command that triggers the intent as "Book flight to Paris". This will look like the screenshot below. 
+![Add New Intent](./Images/AddNewIntent.PNG)
 
-Then click **Save**, and the utterance will be presented for labeling. The intent "BookFlight" (just click on it) will be highlighted, and you will see a drop-down with the entities you've defined. 
+Then click **Save**, and the utterance will be presented for labeling. The intent "BookFlight" (just click on it) will be highlighted, and you will see a drop-down with the entities you've defined.  Click **Submit** to submit the utterance to your LUIS app.
 
 ![Labeling Entents](./Images/BookFlightIntent.PNG)
 
-Next, add a second intent called "GetWeather", with the example "How is the weather in London". Label "London" as a "Location" entity, and click **Submit**.
+Next, add a second intent called "GetWeather", with the example command that triggers the intent as "How is the weather in London". Click **Save**, then continue by accepting the presented utterance as a "GetWeather" intent and clicking **Submit**.
 
 ######Defining Entities
   
