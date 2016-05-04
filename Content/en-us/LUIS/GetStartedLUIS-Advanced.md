@@ -9,17 +9,17 @@ Weight: 100 -->
 
 ###Action Binding
 
-After you have created one or more entities and start creating intents, you may want to link an intent to an action. You would then like to  specify requirements for this action to be triggered. These requirements are known as parameters. LUIS supports only one action per intent. Each action can include a group of parameters derived from entities. The parameter can be optional or required, LUIS assumes that an action is triggered only when all the required parameters are fulfilled. 
+ There are times when you may want to link an intent to an action. You can also specify requirements for this action to be triggered. These requirements are known as parameters. LUIS supports only one action per intent. Each action can include a group of parameters derived from entities. The parameter can be optional or required, LUIS assumes that an action is triggered only when all the required parameters are fulfilled. 
 
 ###Defining an Action
 
-1. On the left-hand panel of the LUIS Application Editor work space, click an existing intent, for example "BookFlight", or create a new one.
+1. In the LUIS Application Editor work space on the left-hand panel, click an existing intent, for example "BookFlight", or create a new one.
 2. In the **Add a new intent** dialog box which opens, click **Add Action**.
 3. Let us assume this action requires three parameters, "FromLocation", "ToLocation", and "Date".
-4. Click **Add Parameter**. Type the name of the parameter, for example "FromLocation", and specify its type from the entities in the **Type** drop-down menu. In this case "FromLocation" is the entity. 
-5. Click **Add Parameter** again to add the next parameter, for example "ToLocation" with "ToLocation" being the entity.
+4. Click **Add Parameter**. Type the name of the parameter, for example "FromLocation", and specify its type from the entities in the **Type** drop-down menu. In this case "Location::FromLocation" is the entity. (For hereditary entities, see [Get started with LUIS: The Basics](GetStartedLUIS-Basics.md).)
+5. Click **Add Parameter** again to add the next parameter, for example "ToLocation" with "Location::ToLocation" being the entity.
 6. Add a third parameter "Date" with "datetime" being the entity.
-7. Check the **Required** check box next to the name of the parameter that is required for the action to trigger. (If the action is optional leave the check box unchecked.)
+7. Check the **Required** check box next to the name of the parameter that is required for the action to be triggered. (If the action is optional leave the check box unchecked.)
 
 ![Adding Action Binding](./Images/AddActionBinding.PNG)
 
