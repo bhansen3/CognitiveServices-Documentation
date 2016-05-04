@@ -7,7 +7,7 @@ Weight: 100 -->
 
 ###Language Understanding Intelligent Services (LUIS) brings the power of machine learning to your apps
 
-LUIS is designed to enable you to quickly deploy an http endpoint that will take the sentences you send it and interpret them in terms of the intention they convey and the key entities that are present. By using the LUIS web interface, you can custom design a set of intentions and entities that are relevant to your application, then let LUIS guide you through the process of building a language understanding system. 
+LUIS is designed to enable you to quickly deploy an HTTP endpoint that will take the sentences you send it and interpret them in terms of the intention they convey and the key entities that are present. By using the LUIS web interface, you can custom design a set of intentions and entities that are relevant to your application, then let LUIS guide you through the process of building a language understanding system. 
 
 #####Benefits to using LUIS
 
