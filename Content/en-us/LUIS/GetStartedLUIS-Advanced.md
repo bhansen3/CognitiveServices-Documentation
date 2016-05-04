@@ -19,31 +19,31 @@ Weight: 100 -->
 4. Click **Add Parameter**. Type the name of the parameter, for example "FromLocation", and specify its type from the entities in the **Type** drop-down menu. In this case "Location::FromLocation" is the entity. (For hereditary entities, see [Get started with LUIS: The Basics](GetStartedLUIS-Basics.md).)
 5. Click **Add Parameter** again to add the next parameter, for example "ToLocation" with "Location::ToLocation" being the entity.
 6. Add a third parameter "Date" with "datetime" being the entity.
-7. Check the **Required** check box next to the name of the parameter that is required for the action to be triggered. (If the action is optional leave the check box unchecked.)
+7. Check the **Required** check box next to the name of the parameter that is required for the action to be triggered. (If the action is optional, leave the check box unchecked.)
 
 ![Adding Action Binding](./Images/AddActionBinding.PNG)
 
 **Notes:**
-To delete a parameter, click on the trashcan next to its field. To delete an action with its parameters, click **Delete Action** from inside the **Add a new intent** dialog box.
+To delete a parameter, click the trashcan next to its field. To delete an action with its parameters, click **Delete Action** from inside the **Add a new intent** dialog box.
 
 ###Action Fulfillment (Preview)
 
-This feature enables you to fulfill the actions that were trigged through a set of channels. For example, if you created the "Get_weather" intent and the action triggered (all the required parameters were filled), you can use the GetCurrentWeather channel to retrieve the weatherfor your users to see. 
+This feature enables you to fulfill the actions that were trigged through a set of channels. For example, if you created the "GetWeather" intent and the action has been triggered (all the required parameters were filled), you can use the GetCurrentWeather channel to retrieve the weather for your users to see. 
 
-LUIS is providing a first set of channels and actions, expect more soon. For a full list of current channels, see [Channels](Channels.md).
+LUIS is providing a first set of channels and actions, expect to see more soon. For a full list of current channels, see [Channels](Channels.md).
 
 ![Action Fulfillment](./Images/AddFulfillment.png)
 
 Follow these steps (see above screenshot): 
 
 1. In the top teal-colored ribbon of the LUIS Application Editor work space, click **Go to Preview**.
-2. Find Intents in the left-hand menu panel, then click the intent for which you want to bind an action, in this case “Get_temperature”. 
+2. Find Intents in the left-hand menu panel, then click the intent for which you want to bind an action, in this case “GetWeather”. 
 2. In the **Add a new Intent** dialog box, click **Add Action**. This will open the dialog box as shown in above screenshot.
 3. Check **Fulfillment** in the **Action Info** sub-section to enable action types.
 4. From the Action Type drop-down list, select "GetCurrentWeather".
 5. In the Action Parameters sub-section, click **Add Parameter** to add a new line.
-6. Check the box if the parameter is required, add parameter name, type, value and a text prompt, which is displayed if the parameter is not identified with the intent. (In above screenshot: “required”, “location”, “location”, “locations”, “Which place?”) 
-7. In the **Action Settings** sub-section, map the action to a parameter from the drop-down list, in this case “location”.
+6. Check the box if the parameter is required, add parameter name, type, value and a text prompt, which is displayed if the parameter is not provided with the intent. (In above screenshot: “required”, “location”, “location”, “locations”, “Which place?”) 
+7. In the **Action Settings** sub-section, map the action to a parameter from the **Append a Parameter** drop-down list, in this case “location”.
 8. Click **Save** to complete and exit.
 
 ###Schematized JSON response
@@ -53,7 +53,7 @@ This is an example extract of the JSON response that is returned when an action 
 "actions": [
         {
           "triggered": true,
-          "name": "Get_temperature",
+          "name": "GetWeather",
           "parameters": [
             {
               "name": "location",
@@ -61,7 +61,7 @@ This is an example extract of the JSON response that is returned when an action 
               "value": [
                 {
                   "entity": "location"
-                  "type": "location",
+                  "type": "location::tolation",
                   "score": 0.8636191
                 }
               ]
